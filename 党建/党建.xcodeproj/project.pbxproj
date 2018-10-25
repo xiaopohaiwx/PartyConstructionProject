@@ -21,6 +21,13 @@
 		04F9AE382181EC1800C63D50 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE352181EC1800C63D50 /* BannerView.m */; };
 		04F9AE392181EC1800C63D50 /* FirstPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE362181EC1800C63D50 /* FirstPageView.m */; };
 		04F9AE3D2181EC5000C63D50 /* FirstPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE3C2181EC5000C63D50 /* FirstPageViewModel.m */; };
+		04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE452181F12300C63D50 /* BaseTableViewController.m */; };
+		04F9AE492181F12B00C63D50 /* TableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE472181F12B00C63D50 /* TableCellModel.m */; };
+		04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE4E2181F55A00C63D50 /* RefreshCollectionView.m */; };
+		04F9AE5A2181F55A00C63D50 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE512181F55A00C63D50 /* LoadingView.m */; };
+		04F9AE5B2181F55A00C63D50 /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE532181F55A00C63D50 /* RefreshTableView.m */; };
+		04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE562181F55A00C63D50 /* AssignToObject.m */; };
+		04F9AE5D2181F55A00C63D50 /* GetDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE582181F55A00C63D50 /* GetDataBase.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,20 @@
 		04F9AE372181EC1800C63D50 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		04F9AE3B2181EC5000C63D50 /* FirstPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewModel.h; sourceTree = "<group>"; };
 		04F9AE3C2181EC5000C63D50 /* FirstPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewModel.m; sourceTree = "<group>"; };
+		04F9AE442181F12300C63D50 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		04F9AE452181F12300C63D50 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		04F9AE472181F12B00C63D50 /* TableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellModel.m; sourceTree = "<group>"; };
+		04F9AE482181F12B00C63D50 /* TableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellModel.h; sourceTree = "<group>"; };
+		04F9AE4D2181F55A00C63D50 /* RefreshCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshCollectionView.h; sourceTree = "<group>"; };
+		04F9AE4E2181F55A00C63D50 /* RefreshCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshCollectionView.m; sourceTree = "<group>"; };
+		04F9AE502181F55A00C63D50 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		04F9AE512181F55A00C63D50 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		04F9AE522181F55A00C63D50 /* RefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshTableView.h; sourceTree = "<group>"; };
+		04F9AE532181F55A00C63D50 /* RefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshTableView.m; sourceTree = "<group>"; };
+		04F9AE552181F55A00C63D50 /* AssignToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignToObject.h; sourceTree = "<group>"; };
+		04F9AE562181F55A00C63D50 /* AssignToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignToObject.m; sourceTree = "<group>"; };
+		04F9AE572181F55A00C63D50 /* GetDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataBase.h; sourceTree = "<group>"; };
+		04F9AE582181F55A00C63D50 /* GetDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataBase.m; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +131,8 @@
 		04B1A932217FEE7A00B83E3C /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				04F9AE442181F12300C63D50 /* BaseTableViewController.h */,
+				04F9AE452181F12300C63D50 /* BaseTableViewController.m */,
 				04B1A933217FF66A00B83E3C /* BaseNavigationViewController.h */,
 				04B1A934217FF66A00B83E3C /* BaseNavigationViewController.m */,
 				04B1A93B217FFDEC00B83E3C /* BaseTabBarViewController.h */,
@@ -121,6 +144,10 @@
 		04B1A936217FF6F900B83E3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04F9AE542181F55A00C63D50 /* CHFFMDB */,
+				04F9AE4F2181F55A00C63D50 /* RefreshTableView */,
+				04F9AE4D2181F55A00C63D50 /* RefreshCollectionView.h */,
+				04F9AE4E2181F55A00C63D50 /* RefreshCollectionView.m */,
 				04B1A937217FF71400B83E3C /* CommonDefine.h */,
 				04B1A93A217FF89800B83E3C /* PrefixHeader.pch */,
 			);
@@ -147,6 +174,8 @@
 		04B1A940217FFE4D00B83E3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04F9AE482181F12B00C63D50 /* TableCellModel.h */,
+				04F9AE472181F12B00C63D50 /* TableCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +277,28 @@
 				04F9AE3C2181EC5000C63D50 /* FirstPageViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04F9AE4F2181F55A00C63D50 /* RefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				04F9AE502181F55A00C63D50 /* LoadingView.h */,
+				04F9AE512181F55A00C63D50 /* LoadingView.m */,
+				04F9AE522181F55A00C63D50 /* RefreshTableView.h */,
+				04F9AE532181F55A00C63D50 /* RefreshTableView.m */,
+			);
+			path = RefreshTableView;
+			sourceTree = "<group>";
+		};
+		04F9AE542181F55A00C63D50 /* CHFFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				04F9AE552181F55A00C63D50 /* AssignToObject.h */,
+				04F9AE562181F55A00C63D50 /* AssignToObject.m */,
+				04F9AE572181F55A00C63D50 /* GetDataBase.h */,
+				04F9AE582181F55A00C63D50 /* GetDataBase.m */,
+			);
+			path = CHFFMDB;
 			sourceTree = "<group>";
 		};
 		89A99980C78D2B5C00D1B4EA /* Frameworks */ = {
@@ -380,15 +431,22 @@
 			files = (
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
+				04F9AE492181F12B00C63D50 /* TableCellModel.m in Sources */,
 				04F9AE382181EC1800C63D50 /* BannerView.m in Sources */,
 				04F9AE3D2181EC5000C63D50 /* FirstPageViewModel.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
+				04F9AE5A2181F55A00C63D50 /* LoadingView.m in Sources */,
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
+				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
+				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,
+				04F9AE5D2181F55A00C63D50 /* GetDataBase.m in Sources */,
 				04F9AE392181EC1800C63D50 /* FirstPageView.m in Sources */,
 				04F9AE322181EBC800C63D50 /* BannerModel.m in Sources */,
+				04F9AE5B2181F55A00C63D50 /* RefreshTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

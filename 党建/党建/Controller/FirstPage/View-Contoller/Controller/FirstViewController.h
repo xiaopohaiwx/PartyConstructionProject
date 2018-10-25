@@ -10,6 +10,7 @@
 #import "PGBanner.h"
 #import "BannerView.h"
 #import "UIImageView+AFNetworking.h"
+#import "FirstPageViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) NSMutableArray *modelArr;
 
 @end
 

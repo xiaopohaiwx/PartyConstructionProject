@@ -14,6 +14,7 @@
 {
     if(self = [super initWithFrame:frame])
     {
+        //导航栏图片
         _imgView = [[UIImageView alloc] init];
         [self addSubview:_imgView];
         [_imgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -21,6 +22,7 @@
             make.height.equalTo(200);
         }];
         
+        //导航栏标题背景
         _imgViewBG = [[UIImageView alloc] init];
         _imgViewBG.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
         [self addSubview:_imgViewBG];
@@ -29,6 +31,7 @@
             make.height.equalTo(40);
         }];
         
+        //导航栏标题
         _labelTitle = [[UILabel alloc] init];
         _labelTitle.textColor = [UIColor whiteColor];
         _labelTitle.font = [UIFont systemFontOfSize:15];

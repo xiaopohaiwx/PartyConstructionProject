@@ -60,6 +60,16 @@
 //轮播图
 - (void)initBanner
 {
+    __weak typeof(self) weakSelf = self;
+    FirstPageViewModel *viewModel = [[FirstPageViewModel alloc] init];
+    [viewModel BannerImageRequst:self.manager CallBackArr:^(NSMutableArray * _Nonnull arr) {
+        //接受请求下来的model
+        weakSelf.modelArr = arr;
+    } CallBackAlert:^(UIAlertController * _Nonnull alert) {
+        //如果加载失败，弹出提示框
+        [weakSelf presentViewController:alert animated:YES completion:nil];
+    }];
+    
     BannerView *view1 = [[BannerView alloc] init];
     [view1.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/749b4f2a7cc56b5c0068545718fd24d4.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
     view1.labelTitle.text = @"讲形势指方向——图解读习近平这次对省部级干部说了啥";
