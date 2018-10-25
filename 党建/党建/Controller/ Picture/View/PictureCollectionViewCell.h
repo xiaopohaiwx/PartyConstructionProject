@@ -1,5 +1,5 @@
 //
-//  PictureViewController.h
+//  PictureCollectionViewCell.h
 //  党建
 //
 //  Created by apple on 2018/10/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PictureViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface PictureCollectionViewCell : UICollectionViewCell
 
 @end
 

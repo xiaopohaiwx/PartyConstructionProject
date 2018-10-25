@@ -16,6 +16,11 @@
 		04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A942217FFE9900B83E3C /* FirstViewController.m */; };
 		04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A949217FFF5700B83E3C /* NoticeViewController.m */; };
 		04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A94E217FFFC000B83E3C /* MineViewController.m */; };
+		184207722181E741007CAAA3 /* AssignToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842076F2181E741007CAAA3 /* AssignToObject.m */; };
+		184207732181E741007CAAA3 /* GetDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 184207712181E741007CAAA3 /* GetDataBase.m */; };
+		1842077D2181E896007CAAA3 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842077A2181E896007CAAA3 /* PictureViewController.m */; };
+		184207832181E98F007CAAA3 /* RefreshCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184207822181E98F007CAAA3 /* RefreshCollectionView.m */; };
+		184207862181ED0F007CAAA3 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184207852181ED0F007CAAA3 /* PictureCollectionViewCell.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 		DD68F57C2181AFCB00D7A0EB /* NewsEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD68F57B2181AFCB00D7A0EB /* NewsEyeViewController.m */; };
 		DD6937F62181D8240000A53B /* TableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6937F52181D8240000A53B /* TableCellModel.m */; };
@@ -51,6 +56,16 @@
 		04B1A949217FFF5700B83E3C /* NoticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		04B1A94D217FFFC000B83E3C /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		04B1A94E217FFFC000B83E3C /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		1842076E2181E741007CAAA3 /* AssignToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignToObject.h; sourceTree = "<group>"; };
+		1842076F2181E741007CAAA3 /* AssignToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignToObject.m; sourceTree = "<group>"; };
+		184207702181E741007CAAA3 /* GetDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataBase.h; sourceTree = "<group>"; };
+		184207712181E741007CAAA3 /* GetDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataBase.m; sourceTree = "<group>"; };
+		184207792181E896007CAAA3 /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		1842077A2181E896007CAAA3 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		184207812181E98F007CAAA3 /* RefreshCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshCollectionView.h; sourceTree = "<group>"; };
+		184207822181E98F007CAAA3 /* RefreshCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshCollectionView.m; sourceTree = "<group>"; };
+		184207842181ED0F007CAAA3 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		184207852181ED0F007CAAA3 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,12 +154,15 @@
 		04B1A936217FF6F900B83E3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1842076D2181E741007CAAA3 /* CHFFMDB */,
 				04B1A937217FF71400B83E3C /* CommonDefine.h */,
 				04B1A93A217FF89800B83E3C /* PrefixHeader.pch */,
 				DD6937FD2181D9520000A53B /* LoadingView.h */,
 				DD6937FF2181D9520000A53B /* LoadingView.m */,
 				DD6937FE2181D9520000A53B /* RefreshTableView.h */,
 				DD6938002181D9530000A53B /* RefreshTableView.m */,
+				184207812181E98F007CAAA3 /* RefreshCollectionView.h */,
+				184207822181E98F007CAAA3 /* RefreshCollectionView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -152,6 +170,7 @@
 		04B1A93E217FFE3400B83E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				184207772181E896007CAAA3 /*  Picture */,
 				DD6937EE2181CD1D0000A53B /* InformProjectNewsEye */,
 				04B1A944217FFEA600B83E3C /* FirstPage */,
 				04B1A946217FFF0300B83E3C /* Notice */,
@@ -217,6 +236,52 @@
 		04B1A95321804B5F00B83E3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1842076D2181E741007CAAA3 /* CHFFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				1842076E2181E741007CAAA3 /* AssignToObject.h */,
+				1842076F2181E741007CAAA3 /* AssignToObject.m */,
+				184207702181E741007CAAA3 /* GetDataBase.h */,
+				184207712181E741007CAAA3 /* GetDataBase.m */,
+			);
+			path = CHFFMDB;
+			sourceTree = "<group>";
+		};
+		184207772181E896007CAAA3 /*  Picture */ = {
+			isa = PBXGroup;
+			children = (
+				1842077B2181E896007CAAA3 /* Model */,
+				1842077C2181E896007CAAA3 /* View */,
+				184207782181E896007CAAA3 /* Controller */,
+			);
+			path = " Picture";
+			sourceTree = "<group>";
+		};
+		184207782181E896007CAAA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				184207792181E896007CAAA3 /* PictureViewController.h */,
+				1842077A2181E896007CAAA3 /* PictureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1842077B2181E896007CAAA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1842077C2181E896007CAAA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				184207842181ED0F007CAAA3 /* PictureCollectionViewCell.h */,
+				184207852181ED0F007CAAA3 /* PictureCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,15 +483,20 @@
 			files = (
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
 				DD6938012181D9530000A53B /* LoadingView.m in Sources */,
+				184207732181E741007CAAA3 /* GetDataBase.m in Sources */,
 				DD68F57C2181AFCB00D7A0EB /* NewsEyeViewController.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
 				DD6937F92181D85E0000A53B /* TableViewCell.m in Sources */,
 				DD6937F62181D8240000A53B /* TableCellModel.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
 				DD6937FC2181D8C10000A53B /* BaseTableViewController.m in Sources */,
+				184207722181E741007CAAA3 /* AssignToObject.m in Sources */,
 				DD6938022181D9530000A53B /* RefreshTableView.m in Sources */,
+				184207832181E98F007CAAA3 /* RefreshCollectionView.m in Sources */,
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
+				184207862181ED0F007CAAA3 /* PictureCollectionViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				1842077D2181E896007CAAA3 /* PictureViewController.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,
 			);

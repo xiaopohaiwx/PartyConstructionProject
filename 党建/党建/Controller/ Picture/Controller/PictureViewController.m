@@ -7,11 +7,12 @@
 //
 
 #import "PictureViewController.h"
-#import "AssignToObject.h"
+#import "RefreshCollectionView.h"
+#import "PictureCollectionViewCell.h"
 
 @interface PictureViewController ()
 
-
+@property(nonatomic , strong) RefreshCollectionView * collectionView;
 
 @end
 
@@ -20,9 +21,61 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
 }
+
+- (RefreshCollectionView *)collectionView
+{
+    if(!_collectionView)
+    {
+        _collectionView = [[RefreshCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) collectionViewLayout:UICollectionViewFlowLayout];
+        [_collectionView registerClass:[PictureCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [self.view addSubview:_collectionView];
+    }
+    return _collectionView;
+}
+
+#pragma mark --UICollectionViewDataSource
+//cell
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    
+}
+
+//点击
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    
+}
+
+//行数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 2;
+}
+#pragma mark --UICollectionViewDelegate
+//定义每个cell的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake((SCREENWIDTH-60)/2, (SCREENWIDTH-60)/2);
+}
+
+//定义每个cell横向的间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+//定义每个item的间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+
 
 /*
 #pragma mark - Navigation
