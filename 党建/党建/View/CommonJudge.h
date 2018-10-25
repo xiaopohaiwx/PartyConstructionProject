@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CommonJudge : UIView
-//判断是否登录
-+(void)initJudgeVC:(UIViewController *)vc;
 
 //判断是否有网
 +(BOOL)isConnectionAvailable;
