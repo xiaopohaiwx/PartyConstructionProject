@@ -16,6 +16,11 @@
 		04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A942217FFE9900B83E3C /* FirstViewController.m */; };
 		04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A949217FFF5700B83E3C /* NoticeViewController.m */; };
 		04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A94E217FFFC000B83E3C /* MineViewController.m */; };
+		18E68A7E2181B870006796DA /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A7D2181B870006796DA /* StudyViewController.m */; };
+		18E68A812181BA86006796DA /* StudyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A802181BA86006796DA /* StudyTableViewCell.m */; };
+		18E68A852181BB6C006796DA /* StudyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A842181BB6C006796DA /* StudyModel.m */; };
+		18E68A8B2181BF09006796DA /* AssignToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A882181BF09006796DA /* AssignToObject.m */; };
+		18E68A8C2181BF09006796DA /* GetDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A8A2181BF09006796DA /* GetDataBase.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,16 @@
 		04B1A949217FFF5700B83E3C /* NoticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		04B1A94D217FFFC000B83E3C /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		04B1A94E217FFFC000B83E3C /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		18E68A7C2181B870006796DA /* StudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		18E68A7D2181B870006796DA /* StudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
+		18E68A7F2181BA86006796DA /* StudyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyTableViewCell.h; sourceTree = "<group>"; };
+		18E68A802181BA86006796DA /* StudyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyTableViewCell.m; sourceTree = "<group>"; };
+		18E68A832181BB6C006796DA /* StudyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyModel.h; sourceTree = "<group>"; };
+		18E68A842181BB6C006796DA /* StudyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyModel.m; sourceTree = "<group>"; };
+		18E68A872181BF09006796DA /* AssignToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignToObject.h; sourceTree = "<group>"; };
+		18E68A882181BF09006796DA /* AssignToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignToObject.m; sourceTree = "<group>"; };
+		18E68A892181BF09006796DA /* GetDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataBase.h; sourceTree = "<group>"; };
+		18E68A8A2181BF09006796DA /* GetDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataBase.m; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +121,7 @@
 		04B1A936217FF6F900B83E3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18E68A862181BF09006796DA /* CHFFMDB */,
 				04B1A937217FF71400B83E3C /* CommonDefine.h */,
 				04B1A93A217FF89800B83E3C /* PrefixHeader.pch */,
 			);
@@ -116,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				04B1A944217FFEA600B83E3C /* FirstPage */,
+				18E68A762181B4D0006796DA /* Study */,
 				04B1A946217FFF0300B83E3C /* Notice */,
 				04B1A94B217FFF5D00B83E3C /* Mine */,
 			);
@@ -193,6 +210,54 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18E68A762181B4D0006796DA /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				18E68A822181BB2A006796DA /* Model */,
+				18E68A7B2181B776006796DA /* View */,
+				18E68A772181B5A7006796DA /* Controller */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		18E68A772181B5A7006796DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18E68A7C2181B870006796DA /* StudyViewController.h */,
+				18E68A7D2181B870006796DA /* StudyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18E68A7B2181B776006796DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18E68A7F2181BA86006796DA /* StudyTableViewCell.h */,
+				18E68A802181BA86006796DA /* StudyTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18E68A822181BB2A006796DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E68A832181BB6C006796DA /* StudyModel.h */,
+				18E68A842181BB6C006796DA /* StudyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18E68A862181BF09006796DA /* CHFFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				18E68A872181BF09006796DA /* AssignToObject.h */,
+				18E68A882181BF09006796DA /* AssignToObject.m */,
+				18E68A892181BF09006796DA /* GetDataBase.h */,
+				18E68A8A2181BF09006796DA /* GetDataBase.m */,
+			);
+			path = CHFFMDB;
 			sourceTree = "<group>";
 		};
 		89A99980C78D2B5C00D1B4EA /* Frameworks */ = {
@@ -322,11 +387,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E68A7E2181B870006796DA /* StudyViewController.m in Sources */,
+				18E68A8B2181BF09006796DA /* AssignToObject.m in Sources */,
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
+				18E68A812181BA86006796DA /* StudyTableViewCell.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
+				18E68A8C2181BF09006796DA /* GetDataBase.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				18E68A852181BB6C006796DA /* StudyModel.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,
 			);
