@@ -45,7 +45,6 @@
     self.view.backgroundColor = BGCOLOR;
     [self initTabbarWireView];
     [self initNavigationBar];
-    NSLog(@"CHF");
 }
 
 /*
