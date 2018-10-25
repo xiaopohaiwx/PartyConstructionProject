@@ -22,6 +22,8 @@
 		18E68A8B2181BF09006796DA /* AssignToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A882181BF09006796DA /* AssignToObject.m */; };
 		18E68A8C2181BF09006796DA /* GetDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E68A8A2181BF09006796DA /* GetDataBase.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
+		DD68F57C2181AFCB00D7A0EB /* NewsEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD68F57B2181AFCB00D7A0EB /* NewsEyeViewController.m */; };
+		DD68F5802181B08000D7A0EB /* RefreshFile in Resources */ = {isa = PBXBuildFile; fileRef = DD68F57F2181B08000D7A0EB /* RefreshFile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,9 @@
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
+		DD68F57A2181AFCB00D7A0EB /* NewsEyeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsEyeViewController.h; sourceTree = "<group>"; };
+		DD68F57B2181AFCB00D7A0EB /* NewsEyeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsEyeViewController.m; sourceTree = "<group>"; };
+		DD68F57F2181B08000D7A0EB /* RefreshFile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RefreshFile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,7 @@
 				18E68A862181BF09006796DA /* CHFFMDB */,
 				04B1A937217FF71400B83E3C /* CommonDefine.h */,
 				04B1A93A217FF89800B83E3C /* PrefixHeader.pch */,
+				DD68F57F2181B08000D7A0EB /* RefreshFile */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			children = (
 				04B1A941217FFE9900B83E3C /* FirstViewController.h */,
 				04B1A942217FFE9900B83E3C /* FirstViewController.m */,
+				DD68F57A2181AFCB00D7A0EB /* NewsEyeViewController.h */,
+				DD68F57B2181AFCB00D7A0EB /* NewsEyeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B1A929217FEDFE00B83E3C /* LaunchScreen.storyboard in Resources */,
+				DD68F5802181B08000D7A0EB /* RefreshFile in Resources */,
 				04B1A926217FEDFE00B83E3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,7 +399,11 @@
 				18E68A7E2181B870006796DA /* StudyViewController.m in Sources */,
 				18E68A8B2181BF09006796DA /* AssignToObject.m in Sources */,
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
+<<<<<<< HEAD
 				18E68A812181BA86006796DA /* StudyTableViewCell.m in Sources */,
+=======
+				DD68F57C2181AFCB00D7A0EB /* NewsEyeViewController.m in Sources */,
+>>>>>>> 94f50aab82872796d2a63b1aab5a9f2d7cd711c7
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
 				18E68A8C2181BF09006796DA /* GetDataBase.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
