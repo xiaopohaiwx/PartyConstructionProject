@@ -29,6 +29,8 @@
 		DD69380D2181D97E0000A53B /* arrowDown@2x 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD6938072181D97D0000A53B /* arrowDown@2x 2.png */; };
 		DD69380E2181D97E0000A53B /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD6938082181D97D0000A53B /* arrow@2x.png */; };
 		DD69380F2181D97E0000A53B /* arrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DD6938092181D97E0000A53B /* arrowDown.png */; };
+		DD6938122181EB720000A53B /* CommonJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6938102181EB720000A53B /* CommonJudge.m */; };
+		DD6938162181ED8B0000A53B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6938152181ED8B0000A53B /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,10 @@
 		DD6938072181D97D0000A53B /* arrowDown@2x 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowDown@2x 2.png"; sourceTree = "<group>"; };
 		DD6938082181D97D0000A53B /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		DD6938092181D97E0000A53B /* arrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowDown.png; sourceTree = "<group>"; };
+		DD6938102181EB720000A53B /* CommonJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonJudge.m; sourceTree = "<group>"; };
+		DD6938112181EB720000A53B /* CommonJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonJudge.h; sourceTree = "<group>"; };
+		DD6938142181ED8B0000A53B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DD6938152181ED8B0000A53B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Pods/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +147,7 @@
 			children = (
 				04B1A937217FF71400B83E3C /* CommonDefine.h */,
 				04B1A93A217FF89800B83E3C /* PrefixHeader.pch */,
-				DD6937FD2181D9520000A53B /* LoadingView.h */,
-				DD6937FF2181D9520000A53B /* LoadingView.m */,
-				DD6937FE2181D9520000A53B /* RefreshTableView.h */,
-				DD6938002181D9530000A53B /* RefreshTableView.m */,
+				DD6938132181EBCA0000A53B /* RefreshTableView */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -265,6 +268,10 @@
 			children = (
 				DD6937F72181D85E0000A53B /* TableViewCell.h */,
 				DD6937F82181D85E0000A53B /* TableViewCell.m */,
+				DD6938112181EB720000A53B /* CommonJudge.h */,
+				DD6938102181EB720000A53B /* CommonJudge.m */,
+				DD6938142181ED8B0000A53B /* Reachability.h */,
+				DD6938152181ED8B0000A53B /* Reachability.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +296,17 @@
 				DD6938062181D97D0000A53B /* arrowDown@3x.png */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		DD6938132181EBCA0000A53B /* RefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DD6937FD2181D9520000A53B /* LoadingView.h */,
+				DD6937FF2181D9520000A53B /* LoadingView.m */,
+				DD6937FE2181D9520000A53B /* RefreshTableView.h */,
+				DD6938002181D9530000A53B /* RefreshTableView.m */,
+			);
+			path = RefreshTableView;
 			sourceTree = "<group>";
 		};
 		FC6A93D93978DE62CAFC4929 /* Pods */ = {
@@ -420,12 +438,14 @@
 				DD6938012181D9530000A53B /* LoadingView.m in Sources */,
 				DD68F57C2181AFCB00D7A0EB /* NewsEyeViewController.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
+				DD6938162181ED8B0000A53B /* Reachability.m in Sources */,
 				DD6937F92181D85E0000A53B /* TableViewCell.m in Sources */,
 				DD6937F62181D8240000A53B /* TableCellModel.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
 				DD6937FC2181D8C10000A53B /* BaseTableViewController.m in Sources */,
 				DD6938022181D9530000A53B /* RefreshTableView.m in Sources */,
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
+				DD6938122181EB720000A53B /* CommonJudge.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,

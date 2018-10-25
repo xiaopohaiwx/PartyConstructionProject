@@ -9,6 +9,7 @@
 #import "BaseTableViewController.h"
 #import "RefreshTableView.h"
 #import "TableViewCell.h"
+#import "MBProgressHUD.h"
 
 @interface BaseTableViewController ()
 
@@ -65,8 +66,24 @@
             [weakSelf performSelector:@selector(loadNewData) withObject:nil afterDelay:0.5];
         };
         
+        //上拉
+        _aTableView.dragUpBlock = ^(RefreshTableView *tableView) {
+            //刷新数据
+            [weakSelf performSelector:@selector(loadNewData) withObject:nil afterDelay:0.5];
+        };
     }
     return _aTableView;
+}
+
+//下载新数据
+-(void)loadNewData
+{
+    
+}
+
+-(void)initWithManagerURLString:(NSString *)url
+{
+    
 }
 
 @end
