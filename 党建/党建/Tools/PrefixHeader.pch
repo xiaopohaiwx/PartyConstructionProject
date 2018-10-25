@@ -11,5 +11,6 @@
 
 #import "CommonDefine.h"
 #import "Masonry.h"
+#import "AFHTTPSessionManager.h"
 
 #endif /* PrefixHeader_pch */
