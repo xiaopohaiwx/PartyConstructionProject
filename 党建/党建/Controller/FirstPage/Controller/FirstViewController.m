@@ -45,8 +45,6 @@
     self.view.backgroundColor = BGCOLOR;
     [self initTabbarWireView];
     [self initNavigationBar];
-    
-    NSLog(@"修改测试");
 }
 
 /*
