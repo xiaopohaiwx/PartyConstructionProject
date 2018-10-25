@@ -10,6 +10,7 @@
 #import "RefreshTableView.h"
 #import "TableViewCell.h"
 #import "MBProgressHUD.h"
+#import "CommonJudge.h"
 
 @interface BaseTableViewController ()
 
@@ -83,7 +84,11 @@
 
 -(void)initWithManagerURLString:(NSString *)url
 {
-    
+    //判断是否有网络
+    if ([CommonJudge isConnectionAvailable])
+    {
+        [CommonJudge showMBProgressHUD:@"加载中..." andWhereView:self.view];
+    }
 }
 
 @end
