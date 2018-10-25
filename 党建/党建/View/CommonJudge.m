@@ -8,9 +8,31 @@
 
 #import "CommonJudge.h"
 #import "MBProgressHUD.h"
-#import "Reachability.h"
 
 @implementation CommonJudge
+//判断有没有登录账号
++(void)initJudgeVC:(UIViewController *)vc
+{
+    
+    NSString *str = UserValue(@"judge");
+    if ([str isEqualToString:@"NO"])
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"未登录账号" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"稍后" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //返回首页
+            vc.tabBarController.selectedIndex = 0;
+//            TabBarViewController *tab = [[TabBarViewController alloc] init];
+//            [vc.navigationController pushViewController:[[TabBarViewController alloc] init] animated:YES];
+        }];
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            vc.tabBarController.selectedIndex = 0;
+            [vc.navigationController.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        [alert addAction:action1];
+        [alert addAction:action2];
+        [vc presentViewController:alert animated:YES completion:nil];
+    }
+}
 
 //判断是否有网络连接
 +(BOOL)isConnectionAvailable
@@ -60,6 +82,25 @@
 
 
 
-
+//-(void)initJudge
+//{
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSString *str = [defaults objectForKey:@"judge"];
+//
+//    if ([str isEqualToString:@"NO"])
+//    {
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"未登录账号" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"稍后" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            //返回首页
+//            self.tabBarController.selectedIndex = 0;
+//        }];
+//        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            [self.navigationController.navigationController popViewControllerAnimated:YES];
+//        }];
+//        [alert addAction:action1];
+//        [alert addAction:action2];
+//        [self presentViewController:alert animated:YES completion:nil];
+//    }
+//}
 
 @end
