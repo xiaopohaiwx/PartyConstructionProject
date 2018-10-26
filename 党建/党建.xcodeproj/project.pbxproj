@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04942EFE2182A15400EC19E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04942EFD2182A15400EC19E2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A91D217FEDF800B83E3C /* AppDelegate.m */; };
 		04B1A926217FEDFE00B83E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B1A925217FEDFE00B83E3C /* Assets.xcassets */; };
 		04B1A929217FEDFE00B83E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1A927217FEDFE00B83E3C /* LaunchScreen.storyboard */; };
@@ -27,7 +28,6 @@
 		04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE562181F55A00C63D50 /* AssignToObject.m */; };
 		04F9AE5D2181F55A00C63D50 /* GetDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE582181F55A00C63D50 /* GetDataBase.m */; };
 		04F9AE642182000100C63D50 /* CommonJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE622182000000C63D50 /* CommonJudge.m */; };
-		04F9AE652182000100C63D50 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE632182000100C63D50 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE682182002000C63D50 /* LoadingView.m */; };
 		04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE692182002000C63D50 /* RefreshTableView.m */; };
 		04F9AE702182070900C63D50 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE6F2182070900C63D50 /* TableViewCell.m */; };
@@ -35,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04942EFC2182A15400EC19E2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		04942EFD2182A15400EC19E2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04B1A919217FEDF800B83E3C /* 党建.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "党建.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B1A91C217FEDF800B83E3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04B1A91D217FEDF800B83E3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,13 +76,11 @@
 		04F9AE572181F55A00C63D50 /* GetDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataBase.h; sourceTree = "<group>"; };
 		04F9AE582181F55A00C63D50 /* GetDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataBase.m; sourceTree = "<group>"; };
 		04F9AE622182000000C63D50 /* CommonJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonJudge.m; path = "党建/View/CommonJudge.m"; sourceTree = SOURCE_ROOT; };
-		04F9AE632182000100C63D50 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "党建/View/Reachability.m"; sourceTree = SOURCE_ROOT; };
 		04F9AE662182002000C63D50 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		04F9AE672182002000C63D50 /* RefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshTableView.h; sourceTree = "<group>"; };
 		04F9AE682182002000C63D50 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		04F9AE692182002000C63D50 /* RefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshTableView.m; sourceTree = "<group>"; };
 		04F9AE6C2182066100C63D50 /* CommonJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonJudge.h; sourceTree = "<group>"; };
-		04F9AE6D2182067E00C63D50 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04F9AE6E2182070200C63D50 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		04F9AE6F2182070900C63D50 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,8 +178,6 @@
 			children = (
 				04F9AE6C2182066100C63D50 /* CommonJudge.h */,
 				04F9AE622182000000C63D50 /* CommonJudge.m */,
-				04F9AE6D2182067E00C63D50 /* Reachability.h */,
-				04F9AE632182000100C63D50 /* Reachability.m */,
 				04F9AE6E2182070200C63D50 /* TableViewCell.h */,
 				04F9AE6F2182070900C63D50 /* TableViewCell.m */,
 			);
@@ -297,6 +295,8 @@
 		04F9AE4F2181F55A00C63D50 /* RefreshTableView */ = {
 			isa = PBXGroup;
 			children = (
+				04942EFC2182A15400EC19E2 /* Reachability.h */,
+				04942EFD2182A15400EC19E2 /* Reachability.m */,
 				04F9AE662182002000C63D50 /* LoadingView.h */,
 				04F9AE682182002000C63D50 /* LoadingView.m */,
 				04F9AE672182002000C63D50 /* RefreshTableView.h */,
@@ -454,11 +454,11 @@
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
+				04942EFE2182A15400EC19E2 /* Reachability.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04F9AE642182000100C63D50 /* CommonJudge.m in Sources */,
 				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
 				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
-				04F9AE652182000100C63D50 /* Reachability.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,
 				04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */,
 				04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */,
