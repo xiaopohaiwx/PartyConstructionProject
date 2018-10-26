@@ -197,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				04F9AE2F2181EBC800C63D50 /* Model */,
-				04F9AE3A2181EC5000C63D50 /* ViewModel */,
 				04F9AE332181EBDD00C63D50 /* View-Contoller */,
+				04F9AE3A2181EC5000C63D50 /* ViewModel */,
 			);
 			path = FirstPage;
 			sourceTree = "<group>";

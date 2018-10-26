@@ -59,27 +59,27 @@
 - (void)CallBackBannerView:(NSMutableArray *)modelArr CallBackView0:(view0Block)block0 CallBackView1:(view1Block)block1 CallBackView2:(view2Block)block2 CallBackView3:(view3Block)block3 CallBackView4:(view4Block)block4 CallBackView5:(view5Block)block5
 {
     BannerView *view1 = [[BannerView alloc] init];
-    [view1.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view1.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view1.labelTitle.text = [modelArr[0] valueForKey:@"title"];
     
     BannerView *view2 = [[BannerView alloc] init];
-    [view2.imgView setImageWithURL:[NSURL URLWithString:[modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view2.imgView setImageWithURL:[NSURL URLWithString:[modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view2.labelTitle.text = [modelArr[1] valueForKey:@"title"];
     
     BannerView *view3 = [[BannerView alloc] init];
-    [view3.imgView setImageWithURL:[NSURL URLWithString:[modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view3.imgView setImageWithURL:[NSURL URLWithString:[modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view3.labelTitle.text = [modelArr[2] valueForKey:@"title"];
     
     BannerView *view4 = [[BannerView alloc] init];
-    [view4.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view4.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view4.labelTitle.text = [modelArr[3] valueForKey:@"title"];
     
     BannerView *view0 = [[BannerView alloc] init];
-    [view0.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view0.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view0.labelTitle.text = [modelArr[3] valueForKey:@"title"];
     
     BannerView *view5 = [[BannerView alloc] init];
-    [view5.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    [view5.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
     view5.labelTitle.text = [modelArr[0] valueForKey:@"title"];
     
     block0(view0);

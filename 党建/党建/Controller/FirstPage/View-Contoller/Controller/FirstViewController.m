@@ -32,7 +32,7 @@
     return _manager;
 }
 
-//可以放到控制器的View中，自己抽出去
+//导航线
 - (void)initTabbarWireView
 {
     _imgViewWire = [[UIImageView alloc] init];
@@ -64,6 +64,80 @@
     _scrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_scrollView];
 }
+//初始化FirstPageView
+- (void)initFirstPageView
+{
+    _firstPageView = [[FirstPageView alloc] init];
+//    _firstPageView.backgroundColor = [UIColor grayColor];
+    [_scrollView addSubview:_firstPageView];
+    [_firstPageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view).offset(0);
+        make.top.equalTo(self.banner.bottom).offset(0);
+        make.height.equalTo(462);
+    }];
+    
+    [self.view layoutIfNeeded];
+    _scrollView.contentSize = CGSizeMake(SCREENWIDTH, _firstPageView.frame.origin.y + _firstPageView.frame.size.height);
+    
+    _firstPageView.block = ^(NSInteger tag) {
+        switch (tag) {
+            case 1:
+            {
+                NSLog(@"信工新闻眼");
+            }
+                break;
+            case 2:
+            {
+                NSLog(@"掌上组织生活");
+            }
+                break;
+            case 3:
+            {
+                NSLog(@"党员云互动");
+            }
+                break;
+            case 4:
+            {
+                NSLog(@"党建一点通");
+            }
+                break;
+            case 5:
+            {
+                NSLog(@"党员亮身份");
+            }
+                break;
+            case 6:
+            {
+                NSLog(@"党史上的今天");
+            }
+                break;
+            case 7:
+            {
+                NSLog(@"随时随地学");
+            }
+                break;
+            case 8:
+            {
+                NSLog(@"随时随地拍");
+            }
+                break;
+            case 9:
+            {
+                NSLog(@"制度建设");
+            }
+                break;
+            case 10:
+            {
+                NSLog(@"特色活动");
+            }
+                break;
+                
+            default:
+                break;
+        }
+    };
+}
+
 //轮播图
 - (void)initBanner
 {
@@ -90,19 +164,20 @@
     } CallBackView5:^(BannerView * _Nonnull view5) {
         weakSelf.View5 = view5;
     }];
-    PGBanner *banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[_View0, _View1, _View2, _View3, _View4, _View5] timeInterval:3.0];
-    banner.delegate = self;
-    [self.scrollView addSubview:banner];
+    _banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[_View0, _View1, _View2, _View3, _View4, _View5] timeInterval:3.0];
+    _banner.delegate = self;
+    [self.scrollView addSubview:_banner];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BGCOLOR;
-    [self initTabbarWireView];
     [self initNavigationBar];
     [self initScrollView];
     [self initBanner];
+    [self initFirstPageView];
+    [self initTabbarWireView];
 }
 
 
@@ -110,6 +185,7 @@
 - (void)selectAction:(NSInteger)didSelectAtIndex didSelectView:(id)view
 {
     NSLog(@"index = %ld  view = %@", didSelectAtIndex, view);
+    NSLog(@"url = %@", [_modelArr[didSelectAtIndex] valueForKey:@"url"]);
 }
 
 /*
