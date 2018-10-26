@@ -7,6 +7,7 @@
 //
 
 #import "NoticeViewController.h"
+#import "BaseTableViewController.h"
 
 @interface NoticeViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation NoticeViewController
 
-//可以放到控制器的View中，自己抽出去
+//
 - (void)initTabbarWireView
 {
     _imgViewWire = [[UIImageView alloc] init];
@@ -33,11 +34,31 @@
     self.navigationItem.title = @"通知早知道";
 }
 
+//测试按钮
+-(void)getCustom
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(pressBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(200);
+        make.left.equalTo(100);
+        make.width.equalTo(50);
+        make.height.equalTo(50);
+    }];
+}
+-(void)pressBtn:(UIButton *)btn
+{
+    [self.navigationController pushViewController:[[BaseTableViewController alloc] init] animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BGCOLOR;
     [self initTabbarWireView];
     [self initNavigationBar];
+    [self getCustom];//测试用
 }
 
 /*

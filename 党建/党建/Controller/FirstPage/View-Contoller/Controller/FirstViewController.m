@@ -10,6 +10,13 @@
 
 @interface FirstViewController ()
 
+@property (nonatomic, strong) BannerView *View0;
+@property (nonatomic, strong) BannerView *View1;
+@property (nonatomic, strong) BannerView *View2;
+@property (nonatomic, strong) BannerView *View3;
+@property (nonatomic, strong) BannerView *View4;
+@property (nonatomic, strong) BannerView *View5;
+
 @end
 
 @implementation FirstViewController
@@ -25,7 +32,7 @@
     return _manager;
 }
 
-//可以放到控制器的View中，自己抽出去
+//导航线
 - (void)initTabbarWireView
 {
     _imgViewWire = [[UIImageView alloc] init];
@@ -57,6 +64,80 @@
     _scrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_scrollView];
 }
+//初始化FirstPageView
+- (void)initFirstPageView
+{
+    _firstPageView = [[FirstPageView alloc] init];
+//    _firstPageView.backgroundColor = [UIColor grayColor];
+    [_scrollView addSubview:_firstPageView];
+    [_firstPageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view).offset(0);
+        make.top.equalTo(self.banner.bottom).offset(0);
+        make.height.equalTo(462);
+    }];
+    
+    [self.view layoutIfNeeded];
+    _scrollView.contentSize = CGSizeMake(SCREENWIDTH, _firstPageView.frame.origin.y + _firstPageView.frame.size.height);
+    
+    _firstPageView.block = ^(NSInteger tag) {
+        switch (tag) {
+            case 1:
+            {
+                NSLog(@"信工新闻眼");
+            }
+                break;
+            case 2:
+            {
+                NSLog(@"掌上组织生活");
+            }
+                break;
+            case 3:
+            {
+                NSLog(@"党员云互动");
+            }
+                break;
+            case 4:
+            {
+                NSLog(@"党建一点通");
+            }
+                break;
+            case 5:
+            {
+                NSLog(@"党员亮身份");
+            }
+                break;
+            case 6:
+            {
+                NSLog(@"党史上的今天");
+            }
+                break;
+            case 7:
+            {
+                NSLog(@"随时随地学");
+            }
+                break;
+            case 8:
+            {
+                NSLog(@"随时随地拍");
+            }
+                break;
+            case 9:
+            {
+                NSLog(@"制度建设");
+            }
+                break;
+            case 10:
+            {
+                NSLog(@"特色活动");
+            }
+                break;
+                
+            default:
+                break;
+        }
+    };
+}
+
 //轮播图
 - (void)initBanner
 {
@@ -69,45 +150,42 @@
         //如果加载失败，弹出提示框
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }];
-    
-    NSLog(@"%@", _modelArr);
-    
-    BannerView *view1 = [[BannerView alloc] init];
-    [view1.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view1.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
-    
-    BannerView *view2 = [[BannerView alloc] init];
-    [view2.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view2.labelTitle.text = [_modelArr[1] valueForKey:@"title"];
-    
-    BannerView *view3 = [[BannerView alloc] init];
-    [view3.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view3.labelTitle.text = [_modelArr[2] valueForKey:@"title"];
-    
-    BannerView *view4 = [[BannerView alloc] init];
-    [view4.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view4.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
-    
-    BannerView *view0 = [[BannerView alloc] init];
-    [view0.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view0.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
-    
-    BannerView *view5 = [[BannerView alloc] init];
-    [view5.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view5.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
-    
-    PGBanner *banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[view0, view1, view2, view3, view4, view5] timeInterval:3.0];
-    [self.scrollView addSubview:banner];
+    //FirstPageViewModel回调得到view
+    [viewModel CallBackBannerView:_modelArr CallBackView0:^(BannerView * _Nonnull view0) {
+        weakSelf.View0 = view0;
+    } CallBackView1:^(BannerView * _Nonnull view1) {
+        weakSelf.View1 = view1;
+    } CallBackView2:^(BannerView * _Nonnull view2) {
+        weakSelf.View2 = view2;
+    } CallBackView3:^(BannerView * _Nonnull view3) {
+        weakSelf.View3 = view3;
+    } CallBackView4:^(BannerView * _Nonnull view4) {
+        weakSelf.View4 = view4;
+    } CallBackView5:^(BannerView * _Nonnull view5) {
+        weakSelf.View5 = view5;
+    }];
+    _banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[_View0, _View1, _View2, _View3, _View4, _View5] timeInterval:3.0];
+    _banner.delegate = self;
+    [self.scrollView addSubview:_banner];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BGCOLOR;
-    [self initTabbarWireView];
     [self initNavigationBar];
     [self initScrollView];
     [self initBanner];
+    [self initFirstPageView];
+    [self initTabbarWireView];
+}
+
+
+#pragma mark -- PGBannerDelegate
+- (void)selectAction:(NSInteger)didSelectAtIndex didSelectView:(id)view
+{
+    NSLog(@"index = %ld  view = %@", didSelectAtIndex, view);
+    NSLog(@"url = %@", [_modelArr[didSelectAtIndex] valueForKey:@"url"]);
 }
 
 /*
