@@ -10,6 +10,13 @@
 
 @interface FirstViewController ()
 
+@property (nonatomic, strong) BannerView *View0;
+@property (nonatomic, strong) BannerView *View1;
+@property (nonatomic, strong) BannerView *View2;
+@property (nonatomic, strong) BannerView *View3;
+@property (nonatomic, strong) BannerView *View4;
+@property (nonatomic, strong) BannerView *View5;
+
 @end
 
 @implementation FirstViewController
@@ -69,34 +76,22 @@
         //如果加载失败，弹出提示框
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }];
-    
-    NSLog(@"%@", _modelArr);
-    
-    BannerView *view1 = [[BannerView alloc] init];
-    [view1.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view1.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
-    
-    BannerView *view2 = [[BannerView alloc] init];
-    [view2.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view2.labelTitle.text = [_modelArr[1] valueForKey:@"title"];
-    
-    BannerView *view3 = [[BannerView alloc] init];
-    [view3.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view3.labelTitle.text = [_modelArr[2] valueForKey:@"title"];
-    
-    BannerView *view4 = [[BannerView alloc] init];
-    [view4.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view4.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
-    
-    BannerView *view0 = [[BannerView alloc] init];
-    [view0.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view0.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
-    
-    BannerView *view5 = [[BannerView alloc] init];
-    [view5.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view5.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
-    
-    PGBanner *banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[view0, view1, view2, view3, view4, view5] timeInterval:3.0];
+    //FirstPageViewModel回调得到view
+    [viewModel CallBackBannerView:_modelArr CallBackView0:^(BannerView * _Nonnull view0) {
+        weakSelf.View0 = view0;
+    } CallBackView1:^(BannerView * _Nonnull view1) {
+        weakSelf.View1 = view1;
+    } CallBackView2:^(BannerView * _Nonnull view2) {
+        weakSelf.View2 = view2;
+    } CallBackView3:^(BannerView * _Nonnull view3) {
+        weakSelf.View3 = view3;
+    } CallBackView4:^(BannerView * _Nonnull view4) {
+        weakSelf.View4 = view4;
+    } CallBackView5:^(BannerView * _Nonnull view5) {
+        weakSelf.View5 = view5;
+    }];
+    PGBanner *banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[_View0, _View1, _View2, _View3, _View4, _View5] timeInterval:3.0];
+    banner.delegate = self;
     [self.scrollView addSubview:banner];
 }
 
@@ -108,6 +103,13 @@
     [self initNavigationBar];
     [self initScrollView];
     [self initBanner];
+}
+
+
+#pragma mark -- PGBannerDelegate
+- (void)selectAction:(NSInteger)didSelectAtIndex didSelectView:(id)view
+{
+    NSLog(@"index = %ld  view = %@", didSelectAtIndex, view);
 }
 
 /*

@@ -27,7 +27,6 @@
             NSMutableArray *modelArr = [[NSMutableArray alloc] initWithCapacity:1];
             //字典转模型
             modelArr = [AssignToObject customModel:@"BannerModel" ToArray:rowsArr];
-            NSLog(@"%@", modelArr);
             //轮播图图片回调
             bannerBlock(modelArr);
         }
@@ -49,10 +48,46 @@
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 }
 
+//提示框
 - (UIAlertController *)alertMessage:(NSString *)message
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
     return alert;
 }
+//轮播图view回调
+- (void)CallBackBannerView:(NSMutableArray *)modelArr CallBackView0:(view0Block)block0 CallBackView1:(view1Block)block1 CallBackView2:(view2Block)block2 CallBackView3:(view3Block)block3 CallBackView4:(view4Block)block4 CallBackView5:(view5Block)block5
+{
+    BannerView *view1 = [[BannerView alloc] init];
+    [view1.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view1.labelTitle.text = [modelArr[0] valueForKey:@"title"];
+    
+    BannerView *view2 = [[BannerView alloc] init];
+    [view2.imgView setImageWithURL:[NSURL URLWithString:[modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view2.labelTitle.text = [modelArr[1] valueForKey:@"title"];
+    
+    BannerView *view3 = [[BannerView alloc] init];
+    [view3.imgView setImageWithURL:[NSURL URLWithString:[modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view3.labelTitle.text = [modelArr[2] valueForKey:@"title"];
+    
+    BannerView *view4 = [[BannerView alloc] init];
+    [view4.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view4.labelTitle.text = [modelArr[3] valueForKey:@"title"];
+    
+    BannerView *view0 = [[BannerView alloc] init];
+    [view0.imgView setImageWithURL:[NSURL URLWithString:[modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view0.labelTitle.text = [modelArr[3] valueForKey:@"title"];
+    
+    BannerView *view5 = [[BannerView alloc] init];
+    [view5.imgView setImageWithURL:[NSURL URLWithString:[modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view5.labelTitle.text = [modelArr[0] valueForKey:@"title"];
+    
+    block0(view0);
+    block1(view1);
+    block2(view2);
+    block3(view3);
+    block4(view4);
+    block5(view5);
+}
+
 @end
