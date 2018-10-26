@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = _titleString;
     
     [self.view addSubview:self.aTableView];
 }
@@ -80,7 +81,7 @@
         __weak typeof(self) weakSelf = self;
         //下拉
         _aTableView.pullDownBlock = ^(RefreshTableView *tableView) {
-            weakSelf.page = 0;
+            weakSelf.page = 1;
             //清空所有旧数据
             [weakSelf.objectArr removeAllObjects];
             //刷新数据
@@ -102,7 +103,7 @@
 //下载新数据
 -(void)loadNewData
 {
-    [self initWithManagerURLType:@"0"];
+    [self initWithManagerURLType:_type];
     //结束刷新
     [self.aTableView tableViewDidFinishedLoading];
 }
@@ -115,7 +116,7 @@
         //加载提示
         [CommonJudge showMBProgressHUD:@"加载中..." andWhereView:self.view];
         
-        NSDictionary *dic = @{@"page":@"0", @"rows":@"10", @"type":type};
+        NSDictionary *dic = @{@"page":[NSString stringWithFormat:@"%ld", self.page], @"rows":@"10", @"type":type};
         __weak typeof(self) weakSelf = self;
         [self.manager POST:@"/hhdj/news/newsList.do" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             //数据加载成功时，去掉模块
@@ -125,13 +126,13 @@
             //获取新闻信息数组
             NSArray *objArr = responseObject[@"rows"];
             //字典转模型
-            weakSelf.objectArr = [AssignToObject customModel:@"TableCellModel" ToArray:objArr];
-//            for (NSInteger i = weakSelf.page; i < weakSelf.page + 1; i++)
-//            {
-//                [weakSelf.objectArr addObject:arr[i]];
-//            }
+            NSArray *arr = [AssignToObject customModel:@"TableCellModel" ToArray:objArr];
+            for (NSInteger i = 0; i < [arr count]; i++)
+            {
+                [weakSelf.objectArr addObject:arr[i]];
+            }
             //是否加载完数据库中所有的信息
-            if ([objArr count] % 10 < 10)
+            if ([objArr count] < 10)
             {
                 weakSelf.aTableView.reachedTheEnd = YES;
             }

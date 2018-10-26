@@ -29,7 +29,7 @@
 {
     if(!_collectionView)
     {
-        _collectionView = [[RefreshCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) collectionViewLayout:UICollectionViewFlowLayout];
+        _collectionView = [[RefreshCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
         [_collectionView registerClass:[PictureCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -42,7 +42,7 @@
 //cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    
+    return nil;
 }
 
 //点击

@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+/** 新闻类型 */
+@property (nonatomic, strong) NSString *type;
+/** 新闻页头标题 */
+@property (nonatomic, strong) NSString *titleString;
 
 @end
 
