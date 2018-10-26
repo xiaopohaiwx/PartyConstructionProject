@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//图片宽，（屏幕-缝隙）/2
+#define IMGWHIDTH (SCREENWIDTH-60)/2
+
 @interface PictureCollectionViewCell : UICollectionViewCell
+
+@property(nonatomic , strong) UIImageView * imgView;
+@property(nonatomic , strong) UILabel * titleLab;
 
 @end
 
