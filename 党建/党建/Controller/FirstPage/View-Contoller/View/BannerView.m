@@ -43,7 +43,6 @@
             make.centerY.equalTo(self.imgViewBG);
             make.height.equalTo(15);
         }];
-        
     }
     return self;
 }

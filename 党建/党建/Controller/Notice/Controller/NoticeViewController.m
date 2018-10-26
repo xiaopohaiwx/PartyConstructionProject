@@ -15,7 +15,7 @@
 
 @implementation NoticeViewController
 
-//可以放到控制器的View中，自己抽出去
+//
 - (void)initTabbarWireView
 {
     _imgViewWire = [[UIImageView alloc] init];
