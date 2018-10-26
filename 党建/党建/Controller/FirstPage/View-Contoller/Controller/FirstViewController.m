@@ -70,29 +70,31 @@
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }];
     
+    NSLog(@"%@", _modelArr);
+    
     BannerView *view1 = [[BannerView alloc] init];
-    [view1.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/749b4f2a7cc56b5c0068545718fd24d4.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view1.labelTitle.text = @"讲形势指方向——图解读习近平这次对省部级干部说了啥";
+    [view1.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view1.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
     
     BannerView *view2 = [[BannerView alloc] init];
-    [view2.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/4bbac18c1f8f6c0521b7b6af2ae8ad6c.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view2.labelTitle.text = @"习近平：“永远做人民公仆、时代先锋、民族脊梁";
+    [view2.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[1] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view2.labelTitle.text = [_modelArr[1] valueForKey:@"title"];
     
     BannerView *view3 = [[BannerView alloc] init];
-    [view3.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/66e257fe2b5afdbb6acb8ed1127d06c9.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view3.labelTitle.text = @"校长谭贞在信息工程学院作学习中央31号文件精神专题报告";
+    [view3.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[2] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view3.labelTitle.text = [_modelArr[2] valueForKey:@"title"];
     
     BannerView *view4 = [[BannerView alloc] init];
-    [view4.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/46296e429c7cda71b941b99fa3461fd1.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view4.labelTitle.text = @"水調歌頭—慶祝黨的十九大勝利召開";
+    [view4.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view4.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
     
     BannerView *view0 = [[BannerView alloc] init];
-    [view0.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/46296e429c7cda71b941b99fa3461fd1.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view0.labelTitle.text = @"水調歌頭—慶祝黨的十九大勝利召開";
+    [view0.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[3] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view0.labelTitle.text = [_modelArr[3] valueForKey:@"title"];
     
     BannerView *view5 = [[BannerView alloc] init];
-    [view5.imgView setImageWithURL:[NSURL URLWithString:@"http://oowantxlb.bkt.clouddn.com/upload/rear/749b4f2a7cc56b5c0068545718fd24d4.png"] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-    view5.labelTitle.text = @"讲形势指方向——图解读习近平这次对省部级干部说了啥";
+    [view5.imgView setImageWithURL:[NSURL URLWithString:[_modelArr[0] valueForKey:@"imgUrl"]] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    view5.labelTitle.text = [_modelArr[0] valueForKey:@"title"];
     
     PGBanner *banner = [[PGBanner alloc] initViewWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200) ViewList:@[view0, view1, view2, view3, view4, view5] timeInterval:3.0];
     [self.scrollView addSubview:banner];

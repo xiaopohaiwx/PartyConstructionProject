@@ -13,6 +13,9 @@
 //轮播图图片请求
 - (void)BannerImageRequst:(AFHTTPSessionManager *)manager CallBackArr:(bannerBlock)bannerBlock CallBackAlert:(alertBlock)alertBlock
 {
+    //创建信号量
+    manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     [manager GET:@"/hhdj/carousel/carouselList.do?type=0" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSString *msg = responseDic[@"msg"];
@@ -24,6 +27,7 @@
             NSMutableArray *modelArr = [[NSMutableArray alloc] initWithCapacity:1];
             //字典转模型
             modelArr = [AssignToObject customModel:@"BannerModel" ToArray:rowsArr];
+            NSLog(@"%@", modelArr);
             //轮播图图片回调
             bannerBlock(modelArr);
         }
@@ -32,9 +36,17 @@
             alertBlock([self alertMessage:@"请求错误"]);
         }
         
+        //信号量信号
+        dispatch_semaphore_signal(semaphore);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         alertBlock([self alertMessage:@"请求错误，请检查网络"]);
+        //信号量信号
+        dispatch_semaphore_signal(semaphore);
     }];
+    
+    //等待
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 }
 
 - (UIAlertController *)alertMessage:(NSString *)message
