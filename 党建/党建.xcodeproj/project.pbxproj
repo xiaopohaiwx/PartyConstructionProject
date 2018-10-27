@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040170292183EAC30002C4D4 /* HandheldLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040170282183EAC30002C4D4 /* HandheldLifeViewController.m */; };
+		0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401702B2183ED730002C4D4 /* HandheldLifeView.m */; };
+		04017033218401110002C4D4 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04017032218401110002C4D4 /* UIButton+Category.m */; };
+		04017036218404320002C4D4 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04017035218404320002C4D4 /* UILabel+Category.m */; };
+		04017039218404850002C4D4 /* UIImageView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04017038218404850002C4D4 /* UIImageView+Category.m */; };
 		04942EFE2182A15400EC19E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04942EFD2182A15400EC19E2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1A91D217FEDF800B83E3C /* AppDelegate.m */; };
 		04B1A926217FEDFE00B83E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B1A925217FEDFE00B83E3C /* Assets.xcassets */; };
@@ -32,10 +37,8 @@
 		04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE692182002000C63D50 /* RefreshTableView.m */; };
 		04F9AE702182070900C63D50 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE6F2182070900C63D50 /* TableViewCell.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
-		DD68625D2183FED500EF0C0A /* NewsDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD68625C2183FED500EF0C0A /* NewsDetailsViewModel.m */; };
 		DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E3D218300B8000E135A /* CommonAlertView.m */; };
 		DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */; };
-		DD914E4B2183192A000E135A /* BaseNewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E4A2183192A000E135A /* BaseNewsDetailsViewController.m */; };
 		DDF622FC2182FF300013BBB7 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F62182FF2F0013BBB7 /* arrow.png */; };
 		DDF622FD2182FF300013BBB7 /* arrowDown@2x 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F72182FF2F0013BBB7 /* arrowDown@2x 2.png */; };
 		DDF622FE2182FF300013BBB7 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F82182FF2F0013BBB7 /* arrow@2x.png */; };
@@ -47,6 +50,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040170272183EAC30002C4D4 /* HandheldLifeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandheldLifeViewController.h; sourceTree = "<group>"; };
+		040170282183EAC30002C4D4 /* HandheldLifeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandheldLifeViewController.m; sourceTree = "<group>"; };
+		0401702A2183ED730002C4D4 /* HandheldLifeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandheldLifeView.h; sourceTree = "<group>"; };
+		0401702B2183ED730002C4D4 /* HandheldLifeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandheldLifeView.m; sourceTree = "<group>"; };
+		04017031218401110002C4D4 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
+		04017032218401110002C4D4 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		04017034218404320002C4D4 /* UILabel+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
+		04017035218404320002C4D4 /* UILabel+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
+		04017037218404850002C4D4 /* UIImageView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Category.h"; sourceTree = "<group>"; };
+		04017038218404850002C4D4 /* UIImageView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Category.m"; sourceTree = "<group>"; };
+		0401703A218407600002C4D4 /* CommonCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCategory.h; sourceTree = "<group>"; };
 		04942EFC2182A15400EC19E2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04942EFD2182A15400EC19E2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04B1A919217FEDF800B83E3C /* 党建.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "党建.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,14 +112,10 @@
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
-		DD68625B2183FED500EF0C0A /* NewsDetailsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailsViewModel.h; sourceTree = "<group>"; };
-		DD68625C2183FED500EF0C0A /* NewsDetailsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsViewModel.m; sourceTree = "<group>"; };
 		DD914E3D218300B8000E135A /* CommonAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAlertView.m; sourceTree = "<group>"; };
 		DD914E3E218300B8000E135A /* CommonAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAlertView.h; sourceTree = "<group>"; };
 		DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeObjectArray.h"; sourceTree = "<group>"; };
 		DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeObjectArray.m"; sourceTree = "<group>"; };
-		DD914E492183192A000E135A /* BaseNewsDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNewsDetailsViewController.h; sourceTree = "<group>"; };
-		DD914E4A2183192A000E135A /* BaseNewsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNewsDetailsViewController.m; sourceTree = "<group>"; };
 		DDF622F62182FF2F0013BBB7 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DDF622F72182FF2F0013BBB7 /* arrowDown@2x 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowDown@2x 2.png"; sourceTree = "<group>"; };
 		DDF622F82182FF2F0013BBB7 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
@@ -130,6 +140,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040170242183EA4E0002C4D4 /* HandheldLife */ = {
+			isa = PBXGroup;
+			children = (
+				040170262183EA9E0002C4D4 /* View */,
+				040170252183EA950002C4D4 /* Controller */,
+			);
+			path = HandheldLife;
+			sourceTree = "<group>";
+		};
+		040170252183EA950002C4D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				040170272183EAC30002C4D4 /* HandheldLifeViewController.h */,
+				040170282183EAC30002C4D4 /* HandheldLifeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		040170262183EA9E0002C4D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0401702A2183ED730002C4D4 /* HandheldLifeView.h */,
+				0401702B2183ED730002C4D4 /* HandheldLifeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0401702D218400770002C4D4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */,
+				DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */,
+				04017031218401110002C4D4 /* UIButton+Category.h */,
+				04017032218401110002C4D4 /* UIButton+Category.m */,
+				04017034218404320002C4D4 /* UILabel+Category.h */,
+				04017035218404320002C4D4 /* UILabel+Category.m */,
+				04017037218404850002C4D4 /* UIImageView+Category.h */,
+				04017038218404850002C4D4 /* UIImageView+Category.m */,
+				0401703A218407600002C4D4 /* CommonCategory.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		04B1A910217FEDF800B83E3C = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +225,6 @@
 			children = (
 				04F9AE442181F12300C63D50 /* BaseTableViewController.h */,
 				04F9AE452181F12300C63D50 /* BaseTableViewController.m */,
-				DD914E492183192A000E135A /* BaseNewsDetailsViewController.h */,
-				DD914E4A2183192A000E135A /* BaseNewsDetailsViewController.m */,
 				04B1A933217FF66A00B83E3C /* BaseNavigationViewController.h */,
 				04B1A934217FF66A00B83E3C /* BaseNavigationViewController.m */,
 				04B1A93B217FFDEC00B83E3C /* BaseTabBarViewController.h */,
@@ -185,8 +236,7 @@
 		04B1A936217FF6F900B83E3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */,
-				DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */,
+				0401702D218400770002C4D4 /* Category */,
 				04F9AE542181F55A00C63D50 /* CHFFMDB */,
 				04F9AE4F2181F55A00C63D50 /* RefreshTableView */,
 				04F9AE4D2181F55A00C63D50 /* RefreshCollectionView.h */,
@@ -200,10 +250,11 @@
 		04B1A93E217FFE3400B83E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DDF623062182FF7C0013BBB7 /*  Picture */,
 				04B1A944217FFEA600B83E3C /* FirstPage */,
 				04B1A946217FFF0300B83E3C /* Notice */,
 				04B1A94B217FFF5D00B83E3C /* Mine */,
+				040170242183EA4E0002C4D4 /* HandheldLife */,
+				DDF623062182FF7C0013BBB7 /*  Picture */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,8 +277,6 @@
 			children = (
 				04F9AE482181F12B00C63D50 /* TableCellModel.h */,
 				04F9AE472181F12B00C63D50 /* TableCellModel.m */,
-				DD68625B2183FED500EF0C0A /* NewsDetailsViewModel.h */,
-				DD68625C2183FED500EF0C0A /* NewsDetailsViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -526,27 +575,30 @@
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
 				DDF623262182FF7D0013BBB7 /* PictureCollectionViewCell.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
+				04017039218404850002C4D4 /* UIImageView+Category.m in Sources */,
 				04F9AE492181F12B00C63D50 /* TableCellModel.m in Sources */,
-				DD914E4B2183192A000E135A /* BaseNewsDetailsViewController.m in Sources */,
 				04F9AE382181EC1800C63D50 /* BannerView.m in Sources */,
 				04F9AE3D2181EC5000C63D50 /* FirstPageViewModel.m in Sources */,
 				04B1A92C217FEDFF00B83E3C /* main.m in Sources */,
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
+				0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */,
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
 				04942EFE2182A15400EC19E2 /* Reachability.m in Sources */,
+				04017036218404320002C4D4 /* UILabel+Category.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04F9AE642182000100C63D50 /* CommonJudge.m in Sources */,
 				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
 				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
 				DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */,
+				040170292183EAC30002C4D4 /* HandheldLifeViewController.m in Sources */,
 				DDF623252182FF7D0013BBB7 /* PictureViewController.m in Sources */,
 				04B1A94F217FFFC000B83E3C /* MineViewController.m in Sources */,
 				04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */,
 				04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */,
 				04F9AE5D2181F55A00C63D50 /* GetDataBase.m in Sources */,
-				DD68625D2183FED500EF0C0A /* NewsDetailsViewModel.m in Sources */,
+				04017033218401110002C4D4 /* UIButton+Category.m in Sources */,
 				04F9AE392181EC1800C63D50 /* FirstPageView.m in Sources */,
 				04F9AE322181EBC800C63D50 /* BannerModel.m in Sources */,
 			);
