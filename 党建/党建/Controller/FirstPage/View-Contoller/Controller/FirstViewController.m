@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import "PictureViewController.h"
+#import "BaseTableViewController.h"
 
 @interface FirstViewController ()
 
@@ -80,12 +80,17 @@
     [self.view layoutIfNeeded];
     _scrollView.contentSize = CGSizeMake(SCREENWIDTH, _firstPageView.frame.origin.y + _firstPageView.frame.size.height);
     
-    __weak typeof(self) weakSelf = self;
+    __weak typeof (self) weakSelf = self;
     _firstPageView.block = ^(NSInteger tag) {
         switch (tag) {
             case 1:
             {
                 NSLog(@"信工新闻眼");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"信工新闻眼";
+                base.type = @"0";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
             case 2:
@@ -101,11 +106,21 @@
             case 4:
             {
                 NSLog(@"党建一点通");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"党建一点通";
+                base.type = @"3";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
             case 5:
             {
                 NSLog(@"党员亮身份");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"党员亮身份";
+                base.type = @"5";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
             case 6:
@@ -116,24 +131,39 @@
             case 7:
             {
                 NSLog(@"随时随地学");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"随时随地学";
+                base.type = @"6";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
             case 8:
             {
-                [weakSelf.navigationController pushViewController:[[PictureViewController alloc] init] animated:YES];
+                NSLog(@"随时随地拍");
             }
                 break;
             case 9:
             {
                 NSLog(@"制度建设");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"制度建设";
+                base.type = @"4";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
             case 10:
             {
                 NSLog(@"特色活动");
+                //初始化新闻页面
+                BaseTableViewController *base = [[BaseTableViewController alloc] init];
+                base.titleString = @"特色活动";
+                base.type = @"1";
+                [weakSelf.navigationController pushViewController:base animated:YES];
             }
                 break;
-
+                
             default:
                 break;
         }
@@ -199,4 +229,5 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 @end
