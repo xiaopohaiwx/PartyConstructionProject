@@ -11,10 +11,11 @@
 #import "BannerView.h"
 #import "FirstPageViewModel.h"
 #import "FirstPageView.h"
+#import "HandheldLifeViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FirstViewController : UIViewController<PGBannerDelegate>
+@interface FirstViewController : UIViewController<PGBannerDelegate, FirstPageViewDelegate>
 
 @property (nonatomic, strong) UIImageView *imgViewWire;
 @property (nonatomic, strong) UIButton *loginBtn;
