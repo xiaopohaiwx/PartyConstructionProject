@@ -31,6 +31,7 @@
 		04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE682182002000C63D50 /* LoadingView.m */; };
 		04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE692182002000C63D50 /* RefreshTableView.m */; };
 		04F9AE702182070900C63D50 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE6F2182070900C63D50 /* TableViewCell.m */; };
+		189EAE602184030800E33326 /* UIImageView+cate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EAE5F2184030800E33326 /* UIImageView+cate.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 		DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E3D218300B8000E135A /* CommonAlertView.m */; };
 		DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */; };
@@ -93,6 +94,8 @@
 		04F9AE6C2182066100C63D50 /* CommonJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonJudge.h; sourceTree = "<group>"; };
 		04F9AE6E2182070200C63D50 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		04F9AE6F2182070900C63D50 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		189EAE5E2184030800E33326 /* UIImageView+cate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+cate.h"; sourceTree = "<group>"; };
+		189EAE5F2184030800E33326 /* UIImageView+cate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+cate.m"; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		04B1A936217FF6F900B83E3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				189EAE5D2184030800E33326 /* Cate */,
 				DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */,
 				DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */,
 				04F9AE542181F55A00C63D50 /* CHFFMDB */,
@@ -349,6 +353,15 @@
 				04F9AE582181F55A00C63D50 /* GetDataBase.m */,
 			);
 			path = CHFFMDB;
+			sourceTree = "<group>";
+		};
+		189EAE5D2184030800E33326 /* Cate */ = {
+			isa = PBXGroup;
+			children = (
+				189EAE5E2184030800E33326 /* UIImageView+cate.h */,
+				189EAE5F2184030800E33326 /* UIImageView+cate.m */,
+			);
+			path = Cate;
 			sourceTree = "<group>";
 		};
 		89A99980C78D2B5C00D1B4EA /* Frameworks */ = {
@@ -535,6 +548,7 @@
 				04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */,
 				04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */,
 				04F9AE5D2181F55A00C63D50 /* GetDataBase.m in Sources */,
+				189EAE602184030800E33326 /* UIImageView+cate.m in Sources */,
 				04F9AE392181EC1800C63D50 /* FirstPageView.m in Sources */,
 				04F9AE322181EBC800C63D50 /* BannerModel.m in Sources */,
 			);
