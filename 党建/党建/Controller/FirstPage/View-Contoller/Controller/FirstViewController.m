@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "BaseTableViewController.h"
+#import "PictureViewController.h"
 
 @interface FirstViewController ()
 
@@ -141,6 +142,7 @@
             case 8:
             {
                 NSLog(@"随时随地拍");
+                [weakSelf.navigationController pushViewController:[[PictureViewController alloc] init] animated:YES];
             }
                 break;
             case 9:
