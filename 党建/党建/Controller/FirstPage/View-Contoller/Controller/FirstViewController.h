@@ -12,6 +12,7 @@
 #import "FirstPageViewModel.h"
 #import "FirstPageView.h"
 #import "HandheldLifeViewController.h"
+#import "BaseNewsDetailsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
