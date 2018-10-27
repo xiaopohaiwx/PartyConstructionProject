@@ -15,6 +15,7 @@
 #import "AssignToObject.h"
 #import "TableCellModel.h"
 #import "NSArray+SafeObjectArray.h"
+#import "BaseNewsDetailsViewController.h"
 
 @interface BaseTableViewController ()
 
@@ -175,6 +176,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+//Cell点击操作
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //消除Cell选择痕迹
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TableCellModel *obj = [self.objectArr safeObjectIndex:indexPath.row];
+    BaseNewsDetailsViewController *news = [[BaseNewsDetailsViewController alloc] init];
+    news.topString = self.titleString;
+    [news getNewsData:obj];
+    [self.navigationController pushViewController:news animated:YES];
 }
 
 #pragma mark - UIScrollViewDalatage
