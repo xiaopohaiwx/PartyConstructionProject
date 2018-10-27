@@ -224,6 +224,31 @@
 {
     NSLog(@"index = %ld  view = %@", didSelectAtIndex, view);
     NSLog(@"url = %@", [_modelArr[didSelectAtIndex] valueForKey:@"url"]);
+    BaseNewsDetailsViewController *BNDView = [[BaseNewsDetailsViewController alloc] init];
+    switch (didSelectAtIndex) {
+        case 1:
+        {
+            BNDView.topString = @"随时随地学";
+        }
+            break;
+        case 2:
+        {
+            BNDView.topString = @"信工新闻眼";
+        }
+        case 3:
+        {
+            BNDView.topString = @"信工新闻眼";
+        }
+        case 4:
+        {
+            BNDView.topString = @"随时随地学";
+        }
+            
+        default:
+            break;
+    }
+    BNDView.newsID = [_modelArr[didSelectAtIndex] valueForKey:@"url"];
+    [self.navigationController pushViewController:BNDView animated:YES];
 }
 
 /*

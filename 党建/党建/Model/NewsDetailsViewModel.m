@@ -14,7 +14,7 @@
 
 @implementation NewsDetailsViewModel
 
-+(NSString *)getNewsDetails:(void (^)(NSString *str))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc
++(NSString *)getNewsDetailsContent:(void (^)(NSString *content, NSString *title))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc
 {
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://211.67.177.56:8080"]];
@@ -35,9 +35,10 @@
             
 //            NSLog(@"%@", responseObject[@"data"]);
             NSString *content = [responseObject[@"data"] valueForKey:@"content"];
+            NSString *title = [responseObject[@"data"] valueForKey:@"title"];
             NSLog(@"%@", content);
             //bolck传值，返回数据
-            str(content);
+            str(content, title);
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"%@", error);
