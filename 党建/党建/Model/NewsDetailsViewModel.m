@@ -14,6 +14,10 @@
 
 @implementation NewsDetailsViewModel
 
+/**
+ *  content 新闻内容
+ *  title 新闻标题
+ */
 +(NSString *)getNewsDetailsContent:(void (^)(NSString *content, NSString *title))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc
 {
     
@@ -54,5 +58,41 @@
     return nil;
 }
 
+/**
+ *  content 新闻内容
+ */
++(NSString *)getContent:(void(^)(NSString *str))conStr ViewController:(UIViewController *)vc
+{
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://ehome.yaojunrong.com/"]];
+    //设置请求方式
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    //接收数据是json形式给出
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    //判断是否有网络
+    if ([CommonJudge isConnectionAvailable])
+    {
+        //加载提示
+        [CommonJudge showMBProgressHUD:@"加载中..." andWhereView:vc.view];
+        
+        [manager GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //数据加载成功时，去掉模块
+            [CommonJudge hideMBprogressHUD:vc.view];
+            //获取内容
+            NSString *content = responseObject[@"data"];
+            conStr(content);
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            //数据加载成功时，去掉模块
+            [CommonJudge hideMBprogressHUD:vc.view];
+        }];
+    }
+    else
+    {
+        //警告框提示
+        [CommonAlertView initMessage:@"请检查网络" andVC:vc];
+    }
+    return nil;
+}
 
 @end

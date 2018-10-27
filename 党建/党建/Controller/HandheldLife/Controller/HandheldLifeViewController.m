@@ -7,6 +7,7 @@
 //
 
 #import "HandheldLifeViewController.h"
+#import "BaseTableViewController.h"
 
 @interface HandheldLifeViewController ()
 
@@ -45,6 +46,11 @@
         case 1:
         {
             NSLog(@"政治学习");
+            //初始化新闻页面
+            BaseTableViewController *base = [[BaseTableViewController alloc] init];
+            base.titleString = @"政治学习";
+            base.type = @"8";
+            [self.navigationController pushViewController:base animated:YES];
         }
             break;
         case 2:
