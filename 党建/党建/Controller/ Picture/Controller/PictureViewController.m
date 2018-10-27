@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"随时随地拍";
     [self collectionView];
     
 }
@@ -55,7 +56,7 @@
         _collectionView.dragUpBlock = ^(RefreshCollectionView * _Nonnull collectionView) {
             [weakSelf performSelector:@selector(loadNewData) withObject:nil afterDelay:0.5];
         };
-        
+        //先刷新一次
         [_collectionView firstRefresh];
         
     }

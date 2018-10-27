@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "PictureViewController.h"
 
 @interface FirstViewController ()
 
@@ -79,6 +80,7 @@
     [self.view layoutIfNeeded];
     _scrollView.contentSize = CGSizeMake(SCREENWIDTH, _firstPageView.frame.origin.y + _firstPageView.frame.size.height);
     
+    __weak typeof(self) weakSelf = self;
     _firstPageView.block = ^(NSInteger tag) {
         switch (tag) {
             case 1:
@@ -118,7 +120,7 @@
                 break;
             case 8:
             {
-                NSLog(@"随时随地拍");
+                [weakSelf.navigationController pushViewController:[[PictureViewController alloc] init] animated:YES];
             }
                 break;
             case 9:
@@ -131,7 +133,7 @@
                 NSLog(@"特色活动");
             }
                 break;
-                
+
             default:
                 break;
         }
@@ -197,5 +199,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

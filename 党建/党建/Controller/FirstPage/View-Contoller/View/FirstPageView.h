@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
 @interface FirstPageView : UIView
-
 /* 六个按钮背景 */
 @property (nonatomic, strong) UIImageView *imgViewBG;
 /* 信工新闻眼 */
