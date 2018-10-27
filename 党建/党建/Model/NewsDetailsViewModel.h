@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsDetailsViewModel : NSObject
 
-+(NSString *)getNewsDetails:(void (^)(NSString *str))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc;
++(NSString *)getNewsDetailsContent:(void (^)(NSString *content, NSString *title))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc;
 
 @end
 

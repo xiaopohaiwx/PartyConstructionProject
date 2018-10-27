@@ -10,9 +10,11 @@
 #import <WebKit/WebKit.h>
 #import "NewsDetailsViewModel.h"
 
-@interface BaseNewsDetailsViewController ()<WKNavigationDelegate>
+@interface BaseNewsDetailsViewController ()<WKNavigationDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) WKWebView *wkWebView;
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIImageView *imgView;
 
 @end
 
@@ -25,11 +27,12 @@
     
     __weak typeof(self) weakSelf = self;
     //从网络获取内容信息
-    [NewsDetailsViewModel getNewsDetails:^(NSString * _Nonnull str) {
-        weakSelf.contentStr = str;
+
+    [NewsDetailsViewModel getNewsDetailsContent:^(NSString * _Nonnull content, NSString * _Nonnull title) {
+        weakSelf.contentStr = content;
+        weakSelf.titleString = title;
         [weakSelf getWkWebView];
     } NewsID:self.newsID ViewController:self];
-    
 }
 
 //WkWebView
@@ -80,13 +83,31 @@
     //     document.location = element.src;\
     //     }"];
 }
-
+/**
+ *  每当webView即将发送一个请求之前，都会调用这个方法
+ *  返回Allow，允许加载这个请求， 返回Cancel，禁止加载这个请求
+ */
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
     NSString *str = [navigationAction.request.mainDocumentURL pathExtension];
     if ([str isEqualToString:@"png"]||[str isEqualToString:@"jpg"] || [str isEqualToString:@"gif"])
     {
         NSLog(@"%@", [[navigationAction.request URL] absoluteString]);
+        NSString *imgUrl = [[navigationAction.request URL] absoluteString];
+        NSLog(@"%@", imgUrl);
+        if(_scrollView)
+        {
+            _scrollView.hidden = NO;
+            _imgView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+            _imgView.contentMode = UIViewContentModeScaleAspectFit;//图片自适应
+            _imgView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[navigationAction.request URL]]];
+        }
+        else
+        {
+            [self showBigImage:imgUrl];
+        }
+        
+        
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
@@ -94,6 +115,49 @@
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
+- (void)showBigImage:(NSString *)imageUrl
+{
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    _scrollView.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.9];
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:_scrollView];
+    
+    _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    _imgView.contentMode = UIViewContentModeScaleAspectFit;
+    _imgView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
+    _imgView.userInteractionEnabled = YES;
+    [_imgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
+    [_scrollView addSubview:_imgView];
+    
+    _scrollView.minimumZoomScale = 0.5;
+    _scrollView.maximumZoomScale = 2;
+    _scrollView.delegate = self;
+    _scrollView.contentSize = _imgView.frame.size;
+    [_scrollView setZoomScale:1 animated:YES];
+    
+}
+
+//设置缩放内容
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.imgView;
+}
+
+//控制缩放是在中心
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width) ? (scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5 : 0;
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height) ? (scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5 : 0;
+    self.imgView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX, scrollView.contentSize.height * 0.5 + offsetY);
+}
+
+//单击手势
+- (void) tap:(UITapGestureRecognizer *)tap
+{
+    self.scrollView.hidden = YES;
+    NSLog(@"-------");
+}
 
 //获取数据
 -(void)getNewsData:(TableCellModel *)obj
