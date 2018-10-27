@@ -226,23 +226,26 @@
     NSLog(@"url = %@", [_modelArr[didSelectAtIndex] valueForKey:@"url"]);
     BaseNewsDetailsViewController *BNDView = [[BaseNewsDetailsViewController alloc] init];
     switch (didSelectAtIndex) {
-        case 1:
+        case 0:
         {
             BNDView.topString = @"随时随地学";
+        }
+            break;
+        case 1:
+        {
+            BNDView.topString = @"信工新闻眼";
         }
             break;
         case 2:
         {
             BNDView.topString = @"信工新闻眼";
         }
+            break;
         case 3:
-        {
-            BNDView.topString = @"信工新闻眼";
-        }
-        case 4:
         {
             BNDView.topString = @"随时随地学";
         }
+            break;
             
         default:
             break;
