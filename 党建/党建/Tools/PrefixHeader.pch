@@ -13,4 +13,5 @@
 #import "Masonry.h"
 #import "AFHTTPSessionManager.h"
 #import "UIImageView+AFNetworking.h"
+#import "CommonCategory.h"
 #endif /* PrefixHeader_pch */
