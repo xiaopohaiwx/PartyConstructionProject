@@ -190,7 +190,7 @@
         case 8:
         {
             NSLog(@"随时随地拍");
-            [weakSelf.navigationController pushViewController:[[PictureViewController alloc] init] animated:YES];
+            [self.navigationController pushViewController:[[PictureViewController alloc] init] animated:YES];
         }
             break;
         case 9:
