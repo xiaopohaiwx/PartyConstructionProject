@@ -21,4 +21,15 @@
     return label;
 }
 
++ (UILabel *)labelWithContent:(NSString *)content SuperView:(UIView *)superView TextColor:(UIColor *)textColor Font:(UIFont *)font TextAlignment:(NSTextAlignment)textAlignment NumberOfLines:(NSInteger)numberOfLines{
+    UILabel *label = [[UILabel alloc] init];
+    label.text = content;
+    label.textColor = textColor;
+    label.font = font;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = numberOfLines;
+    [superView addSubview:label];
+    return label;
+}
+
 @end

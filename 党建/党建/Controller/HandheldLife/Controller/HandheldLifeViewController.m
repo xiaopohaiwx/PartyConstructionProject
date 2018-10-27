@@ -18,10 +18,59 @@
 {
     self.navigationItem.title = _titleStr;
 }
+//初始化HandheldLifeView
+- (void)initHandheldLifeView
+{
+    _handheldLifeView = [[HandheldLifeView alloc] init];
+    _handheldLifeView.delegate = self;
+    [self.view addSubview:_handheldLifeView];
+    [_handheldLifeView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(0);
+        make.top.equalTo(NavigationBarHeight);
+        make.size.equalTo(SCREENHEIGHT);
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BGCOLOR;
+    [self initNav];
+    [self initHandheldLifeView];
+}
+
+#pragma mark -- HandheldLifeViewDelegate
+- (void)itemDidSelect:(NSInteger)tag
+{
+    switch (tag) {
+        case 1:
+        {
+            NSLog(@"政治学习");
+        }
+            break;
+        case 2:
+        {
+            NSLog(@"思想汇报");
+        }
+            break;
+        case 3:
+        {
+            NSLog(@"心得总结");
+        }
+            break;
+        case 4:
+        {
+            NSLog(@"民主评议");
+        }
+            break;
+        case 5:
+        {
+            NSLog(@"流动党员找组织");
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 /*
