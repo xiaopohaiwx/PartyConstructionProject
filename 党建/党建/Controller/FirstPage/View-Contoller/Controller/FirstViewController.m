@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "BaseTableViewController.h"
 #import "PictureViewController.h"
+#import "HistoryOfTodayViewController.h"
 
 @interface FirstViewController ()
 
@@ -182,6 +183,8 @@
         case 6:
         {
             NSLog(@"党史上的今天");
+            HistoryOfTodayViewController *history = [[HistoryOfTodayViewController alloc] init];
+            [self.navigationController pushViewController:history animated:YES];
         }
             break;
         case 7:

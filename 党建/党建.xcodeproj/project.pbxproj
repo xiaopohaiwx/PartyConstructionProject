@@ -41,6 +41,7 @@
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 		DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E3D218300B8000E135A /* CommonAlertView.m */; };
 		DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */; };
+		DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA4A43121845D9300FFA87C /* HistoryOfTodayViewController.m */; };
 		DDF622FC2182FF300013BBB7 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F62182FF2F0013BBB7 /* arrow.png */; };
 		DDF622FD2182FF300013BBB7 /* arrowDown@2x 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F72182FF2F0013BBB7 /* arrowDown@2x 2.png */; };
 		DDF622FE2182FF300013BBB7 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF622F82182FF2F0013BBB7 /* arrow@2x.png */; };
@@ -122,6 +123,8 @@
 		DD914E3E218300B8000E135A /* CommonAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAlertView.h; sourceTree = "<group>"; };
 		DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeObjectArray.h"; sourceTree = "<group>"; };
 		DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeObjectArray.m"; sourceTree = "<group>"; };
+		DDA4A43021845D9300FFA87C /* HistoryOfTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryOfTodayViewController.h; sourceTree = "<group>"; };
+		DDA4A43121845D9300FFA87C /* HistoryOfTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryOfTodayViewController.m; sourceTree = "<group>"; };
 		DDF622F62182FF2F0013BBB7 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DDF622F72182FF2F0013BBB7 /* arrowDown@2x 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowDown@2x 2.png"; sourceTree = "<group>"; };
 		DDF622F82182FF2F0013BBB7 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
@@ -258,6 +261,7 @@
 		04B1A93E217FFE3400B83E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DDA4A42E21845D2F00FFA87C /* HistoryOfToday */,
 				04B1A944217FFEA600B83E3C /* FirstPage */,
 				04B1A946217FFF0300B83E3C /* Notice */,
 				04B1A94B217FFF5D00B83E3C /* Mine */,
@@ -428,6 +432,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DDA4A42E21845D2F00FFA87C /* HistoryOfToday */ = {
+			isa = PBXGroup;
+			children = (
+				DDA4A42F21845D7100FFA87C /* Controller */,
+			);
+			path = HistoryOfToday;
+			sourceTree = "<group>";
+		};
+		DDA4A42F21845D7100FFA87C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDA4A43021845D9300FFA87C /* HistoryOfTodayViewController.h */,
+				DDA4A43121845D9300FFA87C /* HistoryOfTodayViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DDF623062182FF7C0013BBB7 /*  Picture */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +615,7 @@
 				0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */,
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
 				04942EFE2182A15400EC19E2 /* Reachability.m in Sources */,
 				04017036218404320002C4D4 /* UILabel+Category.m in Sources */,
