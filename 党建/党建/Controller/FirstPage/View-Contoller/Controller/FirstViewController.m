@@ -56,6 +56,7 @@
     
     _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -122,6 +123,12 @@
     [self initBanner];
     [self initFirstPageView];
     [self initTabbarWireView];
+}
+
+//导航栏登录点击事件
+- (void)login:(UIButton *)btn
+{
+    NSLog(@"登录");
 }
 
 #pragma mark -- FirstPageViewDelegate
