@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSString *)getNewsDetailsContent:(void (^)(NSString *content, NSString *title))str NewsID:(NSString *)newsID ViewController:(UIViewController *)vc;
 
++(NSString *)getContent:(void(^)(NSString *str))conStr ViewController:(UIViewController *)vc;
 @end
 
 NS_ASSUME_NONNULL_END

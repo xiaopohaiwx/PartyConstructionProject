@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "BaseTableViewController.h"
 #import "PictureViewController.h"
+#import "HistoryOfTodayViewController.h"
 
 @interface FirstViewController ()
 
@@ -56,6 +57,7 @@
     
     _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -124,6 +126,12 @@
     [self initTabbarWireView];
 }
 
+//导航栏登录点击事件
+- (void)login:(UIButton *)btn
+{
+    NSLog(@"登录");
+}
+
 #pragma mark -- FirstPageViewDelegate
 - (void)itemDidSelect:(NSInteger)tag
 {
@@ -175,6 +183,8 @@
         case 6:
         {
             NSLog(@"党史上的今天");
+            HistoryOfTodayViewController *history = [[HistoryOfTodayViewController alloc] init];
+            [self.navigationController pushViewController:history animated:YES];
         }
             break;
         case 7:
