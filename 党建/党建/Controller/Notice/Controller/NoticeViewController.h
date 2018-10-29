@@ -6,11 +6,11 @@
 //  Copyright © 2018年 wx. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NoticeViewController : UIViewController
+@interface NoticeViewController : BaseTableViewController
 
 @property (nonatomic, strong) UIImageView *imgViewWire;
 

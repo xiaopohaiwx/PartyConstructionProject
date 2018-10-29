@@ -26,7 +26,9 @@
     BaseNavigationViewController *firstPage = [[BaseNavigationViewController alloc] initWithRootViewController:[[FirstViewController alloc] init]];
     [self setBaseNav:firstPage Title:@"首页" ImageName:@"firstPage" ImageNameSelect:@"firstPageSelect"];
     
-    BaseNavigationViewController *notice = [[BaseNavigationViewController alloc] initWithRootViewController:[[NoticeViewController alloc] init]];
+    NoticeViewController *tice = [[NoticeViewController alloc] init];
+    tice.type = @"2";
+    BaseNavigationViewController *notice = [[BaseNavigationViewController alloc] initWithRootViewController:tice];
     [self setBaseNav:notice Title:@"通知早知道" ImageName:@"notice" ImageNameSelect:@"noticeSelect"];
     
     BaseNavigationViewController *mine = [[BaseNavigationViewController alloc] initWithRootViewController:[[MineViewController alloc] init]];
