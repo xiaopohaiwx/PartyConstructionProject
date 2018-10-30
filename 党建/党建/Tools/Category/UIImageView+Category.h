@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //快速创建UIImageView
 + (UIImageView *)imageViewWithName:(NSString *)name SuperView:(UIView *)superView;
+//快速创建UIImageView, 只加背景颜色
++ (UIImageView *)imageViewWithSuperView:(UIView *)superView BGColor:(UIColor *)bgColor;
 
 @end
 

@@ -1,8 +1,8 @@
 //
-//  NoticeViewController.h
+//  LoginViewController.h
 //  党建
 //
-//  Created by Mac on 2018/10/24.
+//  Created by Mac on 2018/10/29.
 //  Copyright © 2018年 wx. All rights reserved.
 //
 
@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NoticeViewController : UIViewController
-
+@interface LoginViewController : UIViewController
 
 @end
 

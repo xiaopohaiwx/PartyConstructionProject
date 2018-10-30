@@ -13,14 +13,11 @@
 @end
 
 @implementation NoticeViewController
-
-//
+//导航线
 - (void)initTabbarWireView
 {
-    _imgViewWire = [[UIImageView alloc] init];
-    _imgViewWire.backgroundColor = NavigationColor;
-    [self.view addSubview:_imgViewWire];
-    [_imgViewWire mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIImageView *imgView = [UIImageView imageViewWithSuperView:self.view BGColor:NavigationColor];
+    [imgView makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(SCREENWIDTH / 3);
         make.bottom.equalTo(-TabBarHeight);
         make.size.equalTo(CGSizeMake(SCREENWIDTH / 3, 2));
