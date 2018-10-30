@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NoticeViewController : BaseTableViewController
 
-@property (nonatomic, strong) UIImageView *imgViewWire;
 
 @end
 

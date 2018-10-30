@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIButton *)buttonWithName:(NSString *)name SuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
 //快速创建button, 不传图片名
 + (UIButton *)buttonWithSuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
+//快速创建button, 不传图片, 设置字体
++ (UIButton *)buttonWithSuperView:(UIView *)superView TitleFont:(float)Titlefont Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MineView.h"
+#import "LoginViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MineViewController : UIViewController
+@interface MineViewController : UIViewController<MineViewDelegate>
 
-@property (nonatomic, strong) UIImageView *imgViewWire;
+@property (nonatomic, strong) MineView *mineView;
 
 @end
 

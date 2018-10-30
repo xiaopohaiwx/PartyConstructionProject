@@ -28,5 +28,14 @@
     return button;
 }
 
++ (UIButton *)buttonWithSuperView:(UIView *)superView TitleFont:(float)Titlefont Tag:(NSInteger)tag Target:(id)target Action:(SEL)action{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont systemFontOfSize:Titlefont];
+    button.tag = tag;
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [superView addSubview:button];
+    return button;
+}
+
 
 @end
