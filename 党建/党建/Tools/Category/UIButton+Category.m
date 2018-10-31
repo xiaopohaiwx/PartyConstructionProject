@@ -37,5 +37,14 @@
     return button;
 }
 
++ (UIButton *)buttonWithName:(NSString *)name SuperView:(UIView *)superView Title:(NSString *)title Target:(id)target Action:(SEL)action{
+    UIButton *button = [[UIButton alloc] init];
+    [button setBackgroundImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:title forState:UIControlStateNormal];
+    [superView addSubview:button];
+    return button;
+}
+
 
 @end

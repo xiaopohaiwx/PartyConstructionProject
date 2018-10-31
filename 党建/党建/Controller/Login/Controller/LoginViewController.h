@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<LoginVeiwDelegate>
+
+@property (nonatomic, strong) LoginView *loginView;
 
 @end
 

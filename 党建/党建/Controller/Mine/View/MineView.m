@@ -10,6 +10,8 @@
 
 @implementation MineView{
     UIImageView *imgViewBG;
+    UIButton *columnBtn;
+    UIButton *exitBtn;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -39,22 +41,12 @@
             make.size.equalTo(CGSizeMake(150, 13));
         }];
         
-        if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
-        {
-            
-        }
-        else
-        {
-            imgViewHead.image = [UIImage imageNamed:@"my_head"];
-            [button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
-        }
-        
         NSArray *imgArr = @[@"information", @"integral", @"update_pwd", @"icon3"];
         NSArray *contentArr = @[@"个人信息", @"个人量化积分", @"修改密码", @"党费缴纳"];
         
         for(NSInteger i = 0; i < 4; ++i)
         {
-            UIButton *columnBtn = [UIButton buttonWithSuperView:self Tag:i + 1 Target:self Action:@selector(MineBtn:)];
+            columnBtn = [UIButton buttonWithSuperView:self Tag:i + 1 Target:self Action:@selector(MineBtn:)];
             [columnBtn makeConstraints:^(MASConstraintMaker *make) {
                 make.left.right.equalTo(0);
                 make.top.equalTo(self->imgViewBG.bottom).offset(i * 61);
@@ -63,31 +55,48 @@
             
             UIImageView *imgView = [UIImageView imageViewWithName:imgArr[i] SuperView:self];
             [imgView makeConstraints:^(MASConstraintMaker *make) {
-                make.left.equalTo(columnBtn.left).offset(10);
-                make.centerY.equalTo(columnBtn);
+                make.left.equalTo(self->columnBtn.left).offset(10);
+                make.centerY.equalTo(self->columnBtn);
                 make.size.equalTo(CGSizeMake(35, 35));
             }];
             
             UILabel *label = [UILabel labelWithContent:contentArr[i] SuperView:self TextColor:ssRGBHex(0x666666) Font:[UIFont systemFontOfSize:17] TextAlignment:NSTextAlignmentLeft NumberOfLines:1];
             [label makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(imgView.right).offset(10);
-                make.centerY.equalTo(columnBtn);
+                make.centerY.equalTo(self->columnBtn);
                 make.size.equalTo(CGSizeMake(150, 15));
             }];
             
             UIImageView *imgViewArrow = [UIImageView imageViewWithName:@"jiantou" SuperView:self];
             [imgViewArrow makeConstraints:^(MASConstraintMaker *make) {
-                make.right.equalTo(columnBtn.right).offset(-10);
-                make.centerY.equalTo(columnBtn);
+                make.right.equalTo(self->columnBtn.right).offset(-10);
+                make.centerY.equalTo(self->columnBtn);
                 make.size.equalTo(CGSizeMake(10, 15));
             }];
             
             UIImageView *imgViewWire = [UIImageView imageViewWithSuperView:self BGColor:ssRGBHex(0xDDDDDD)];
             [imgViewWire makeConstraints:^(MASConstraintMaker *make) {
                 make.left.right.equalTo(0);
-                make.top.equalTo(columnBtn.bottom).offset(0);
+                make.top.equalTo(self->columnBtn.bottom).offset(0);
                 make.height.equalTo(1);
             }];
+        }
+        
+        if([USERDEFAULT(@"token")])
+        {
+            exitBtn = [UIButton buttonWithName:@"login_btn" SuperView:self Title:@"退出登录" Target:self Action:@selector(MineBtn:)];
+            exitBtn.tag = 5;
+            [exitBtn makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(15);
+                make.right.equalTo(-15);
+                make.top.equalTo(self->columnBtn.bottom).offset(30);
+                make.height.equalTo(50);
+            }];
+        }
+        else
+        {
+            imgViewHead.image = [UIImage imageNamed:@"my_head"];
+            [button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
         }
     }
     return self;

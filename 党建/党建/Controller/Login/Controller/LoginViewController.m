@@ -18,13 +18,31 @@
 {
     self.navigationItem.title = @"登录";
 }
+//初始化LoginView
+- (void)initLoginView
+{
+    _loginView = [[LoginView alloc] init];
+    _loginView.delegate = self;
+    [self.view addSubview:_loginView];
+    [_loginView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(0);
+        make.top.equalTo(0);
+        make.height.equalTo(SCREENHEIGHT - NavigationBarHeight - TabBarHeight);
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = NavigationColor;
     [self initNav];
+    [self initLoginView];
 }
 
+#pragma mark -- LoginVeiwDelegate
+- (void)DidSelectLoginBtn
+{
+    NSLog(@"点击登录按钮了");
+}
 /*
 #pragma mark - Navigation
 

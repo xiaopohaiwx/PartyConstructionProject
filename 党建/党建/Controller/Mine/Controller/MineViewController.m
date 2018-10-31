@@ -66,7 +66,7 @@
             break;
         case 1:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -78,7 +78,7 @@
             break;
         case 2:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -90,7 +90,7 @@
             break;
         case 3:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -102,7 +102,7 @@
             break;
         case 4:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
