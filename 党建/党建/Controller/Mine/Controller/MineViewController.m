@@ -54,6 +54,15 @@
     [self initNavigationBar];
     [self initMineView];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     if([USERDEFAULT(@"token")])
+     {
+         [_mineView.imgViewHead setImageWithURL:[NSURL URLWithString:[USERDEFAULT(@"headImg")]] placeholderImage:[UIImage imageNamed:@"my_head"]];
+         [_mineView.button setTitle:[USERDEFAULT(@"userName")] forState:UIControlStateNormal];
+     }
+}
 
 #pragma mark -- MineViewDelegate
 - (void)DidSelectItem:(NSInteger)tag
@@ -110,6 +119,11 @@
             {
                 [self jumpLoginView];
             }
+        }
+            break;
+        case 5:
+        {
+            NSLog(@"点击了退出登录");
         }
             break;
             

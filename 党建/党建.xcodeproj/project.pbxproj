@@ -14,6 +14,7 @@
 		04017039218404850002C4D4 /* UIImageView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04017038218404850002C4D4 /* UIImageView+Category.m */; };
 		0401703D2184456E0002C4D4 /* NewsDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401703B2184456E0002C4D4 /* NewsDetailsViewModel.m */; };
 		040170402184457B0002C4D4 /* BaseNewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401703F2184457B0002C4D4 /* BaseNewsDetailsViewController.m */; };
+		0406C21B2189A49100B53A88 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C21A2189A49100B53A88 /* LoginModel.m */; };
 		04942EFE2182A15400EC19E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04942EFD2182A15400EC19E2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A03439218724FF001912F2 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A03438218724FF001912F2 /* MineView.m */; };
 		04A0343F218744E2001912F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0343E218744E2001912F2 /* LoginViewController.m */; };
@@ -79,6 +80,8 @@
 		0401703C2184456E0002C4D4 /* NewsDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailsViewModel.h; sourceTree = "<group>"; };
 		0401703E2184457B0002C4D4 /* BaseNewsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNewsDetailsViewController.h; sourceTree = "<group>"; };
 		0401703F2184457B0002C4D4 /* BaseNewsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNewsDetailsViewController.m; sourceTree = "<group>"; };
+		0406C2192189A49100B53A88 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		0406C21A2189A49100B53A88 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		04942EFC2182A15400EC19E2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04942EFD2182A15400EC19E2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04A03437218724FF001912F2 /* MineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
@@ -236,6 +239,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		0406C2172189A45300B53A88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0406C2192189A49100B53A88 /* LoginModel.h */,
+				0406C21A2189A49100B53A88 /* LoginModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04A03436218724DF001912F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +260,7 @@
 		04A0343A218744B6001912F2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0406C2172189A45300B53A88 /* Model */,
 				04A0343C218744CE001912F2 /* View */,
 				04A0343B218744C6001912F2 /* Controller */,
 			);
@@ -734,6 +747,7 @@
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
 				04F9AE642182000100C63D50 /* CommonJudge.m in Sources */,
 				0401703D2184456E0002C4D4 /* NewsDetailsViewModel.m in Sources */,
+				0406C21B2189A49100B53A88 /* LoginModel.m in Sources */,
 				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
 				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
 				DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */,

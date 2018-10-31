@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<MineViewDelegate>delegate;
 
+@property (nonatomic, strong) UIImageView *imgViewHead;
+@property (nonatomic, strong) UIButton *button;
+
 @end
 
 NS_ASSUME_NONNULL_END

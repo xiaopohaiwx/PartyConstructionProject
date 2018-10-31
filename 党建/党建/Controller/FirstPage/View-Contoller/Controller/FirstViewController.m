@@ -52,17 +52,19 @@
     logoView.image = [UIImage imageNamed:@"logo"];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:logoView];
     self.navigationItem.leftBarButtonItem = leftItem;
-    
-    _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-    [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    if(![USERDEFAULT(@"token")])
+    {
+        _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+        [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
+        self.navigationItem.rightBarButtonItem = rightItem;
+    }
 }
 //初始化scrollView
 - (void)initScrollView
 {
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NavigationBarHeight, SCREENWIDTH, SCREENHEIGHT - NavigationBarHeight - TabBarHeight)];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - NavigationBarHeight - TabBarHeight)];
     _scrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_scrollView];
 }
@@ -118,6 +120,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BGCOLOR;
+    //让视图自动从导航栏下开始
+    self.edgesForExtendedLayout = UIRectEdgeBottom;
     [self initNavigationBar];
     [self initScrollView];
     [self initBanner];
@@ -129,6 +133,8 @@
 - (void)login:(UIButton *)btn
 {
     NSLog(@"登录");
+    LoginViewController *LView = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:LView animated:YES];
 }
 
 #pragma mark -- FirstPageViewDelegate

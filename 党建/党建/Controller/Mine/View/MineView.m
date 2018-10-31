@@ -24,20 +24,20 @@
             make.height.equalTo(150);
         }];
         
-        UIImageView *imgViewHead = [[UIImageView alloc] init];
-        imgViewHead.layer.masksToBounds = YES;
-        imgViewHead.layer.cornerRadius = 40;
-        [self addSubview:imgViewHead];
-        [imgViewHead makeConstraints:^(MASConstraintMaker *make) {
+        _imgViewHead = [[UIImageView alloc] init];
+        _imgViewHead.layer.masksToBounds = YES;
+        _imgViewHead.layer.cornerRadius = 40;
+        [self addSubview:_imgViewHead];
+        [_imgViewHead makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self->imgViewBG);
             make.top.equalTo(self->imgViewBG.top).offset(30);
             make.size.equalTo(CGSizeMake(80, 80));
         }];
         
-        UIButton *button = [UIButton buttonWithSuperView:self TitleFont:13 Tag:0 Target:self Action:@selector(MineBtn:)];
-        [button makeConstraints:^(MASConstraintMaker *make) {
+        _button = [UIButton buttonWithSuperView:self TitleFont:13 Tag:0 Target:self Action:@selector(MineBtn:)];
+        [_button makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self->imgViewBG);
-            make.top.equalTo(imgViewHead.bottom).offset(5);
+            make.top.equalTo(self.imgViewHead.bottom).offset(5);
             make.size.equalTo(CGSizeMake(150, 13));
         }];
         
@@ -95,8 +95,8 @@
         }
         else
         {
-            imgViewHead.image = [UIImage imageNamed:@"my_head"];
-            [button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
+            _imgViewHead.image = [UIImage imageNamed:@"my_head"];
+            [_button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
         }
     }
     return self;

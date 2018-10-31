@@ -14,4 +14,5 @@
 #import "AFHTTPSessionManager.h"
 #import "UIImageView+AFNetworking.h"
 #import "CommonCategory.h"
+#import "AssignToObject.h"
 #endif /* PrefixHeader_pch */
