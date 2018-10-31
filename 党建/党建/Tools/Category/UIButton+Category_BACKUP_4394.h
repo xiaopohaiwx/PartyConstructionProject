@@ -17,13 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIButton *)buttonWithSuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
 
 + (UIButton *)buttonWithSuperView:(UIView *)superView TitleFont:(float)Titlefont Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
-<<<<<<< .merge_file_6NHRWU
+<<<<<<< HEAD
 //快速创建button, 设置背景图片,添加文字
 + (UIButton *)buttonWithName:(NSString *)name SuperView:(UIView *)superView Title:(NSString *)title Target:(id)target Action:(SEL)action;
 =======
 //快速创建button, 不传图片, 设置字体
 + (UIButton *)buttonWithText:(NSString *)text TextColor:(UIColor *)color TextSize:(NSInteger)size SuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action;
->>>>>>> .merge_file_JxHvoK
+>>>>>>> bb4d2b419d0152a0904bac6a0708ee2e42b6a4d4
 @end
 
 NS_ASSUME_NONNULL_END
