@@ -38,10 +38,8 @@
 //导航线
 - (void)initTabbarWireView
 {
-    _imgViewWire = [[UIImageView alloc] init];
-    _imgViewWire.backgroundColor = NavigationColor;
-    [self.view addSubview:_imgViewWire];
-    [_imgViewWire mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIImageView *imgView = [UIImageView imageViewWithSuperView:self.view BGColor:NavigationColor];
+    [imgView makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(0);
         make.bottom.equalTo(-TabBarHeight);
         make.size.equalTo(CGSizeMake(SCREENWIDTH / 3, 2));
@@ -96,6 +94,7 @@
         //如果加载失败，弹出提示框
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }];
+    
     //FirstPageViewModel回调得到view
     [viewModel CallBackBannerView:_modelArr CallBackView0:^(BannerView * _Nonnull view0) {
         weakSelf.View0 = view0;

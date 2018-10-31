@@ -17,4 +17,16 @@
     return imgView;
 }
 
+/**
+ 创建imageView
+ @param bgColor 背景颜色
+ */
++ (UIImageView *)imageViewWithSuperView:(UIView *)superView BGColor:(UIColor *)bgColor
+{
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.backgroundColor = bgColor;
+    [superView addSubview:imageView];
+    return imageView;
+}
+
 @end

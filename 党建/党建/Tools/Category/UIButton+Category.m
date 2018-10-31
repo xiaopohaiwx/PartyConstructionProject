@@ -28,14 +28,14 @@
     return button;
 }
 
-+ (UIButton *)buttonWithText:(NSString *)title TextColor:(UIColor *)color TextSize:(NSInteger)size SuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action{
-    UIButton *button = [[UIButton alloc] init];
++ (UIButton *)buttonWithSuperView:(UIView *)superView TitleFont:(float)Titlefont Tag:(NSInteger)tag Target:(id)target Action:(SEL)action{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont systemFontOfSize:Titlefont];
     button.tag = tag;
-    [button setTitleColor:color forState:UIControlStateNormal];
-    [button setTitle:title forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:size];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [superView addSubview:button];
     return button;
 }
+
+
 @end
