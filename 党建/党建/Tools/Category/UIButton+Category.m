@@ -38,4 +38,15 @@
 }
 
 
++ (UIButton *)buttonWithText:(NSString *)text TextColor:(UIColor *)color TextSize:(NSInteger)size SuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTintColor:color];
+    button.titleLabel.font = [UIFont systemFontOfSize:size];
+    button.tag = tag;
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [superView addSubview:button];
+    return button;
+}
 @end
