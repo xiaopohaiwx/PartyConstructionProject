@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 //快速创建UILabel, lebal行数自定义
 + (UILabel *)labelWithContent:(NSString *)content SuperView:(UIView *)superView TextColor:(UIColor *)textColor Font:(UIFont *)font TextAlignment:(NSTextAlignment)textAlignment NumberOfLines:(NSInteger)numberOfLines;
 
+//设置字体样式，一行
++ (UILabel *)labelWithContent:(NSString *)content SuperView:(UIView *)superView TextColor:(UIColor *)textColor FontName:(NSString *)name Font:(NSInteger)font TextAlignment:(NSTextAlignment)textAlignment AdjustsFontSizeToFitWidth:(BOOL)adjustsFontSizeToFitWidth;
+
+//文字自适应
++ (UILabel *)labelWithAttributedTextContent:(NSString *)content SuperView:(UIView *)superView TextColor:(UIColor *)textColor Font:(UIFont *)font LineSpacing:(NSInteger)line Broadsize:(NSInteger)widthSize mask_makeConstraints:(void (^)(MASConstraintMaker *make))makes;
+
 @end
 
 NS_ASSUME_NONNULL_END
