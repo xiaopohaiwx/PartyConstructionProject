@@ -10,6 +10,7 @@
 #import "MineView.h"
 #import "LoginViewController.h"
 #import "PersonalInformationViewController.h"
+#import "PersonalIntegralViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
