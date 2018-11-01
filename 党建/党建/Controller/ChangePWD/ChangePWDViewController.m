@@ -104,6 +104,7 @@
                 UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                 }];
+                
                 [alert addAction:action];
                 [weakSelf presentViewController:alert animated:YES completion:nil];
             }
