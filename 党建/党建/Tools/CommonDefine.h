@@ -29,4 +29,6 @@
 //tabbar高度
 #define TabBarHeight self.tabBarController.tabBar.bounds.size.height
 
+#define BaseURL @"http://211.67.177.56:8080"
+
 #endif /* CommonDefine_h */

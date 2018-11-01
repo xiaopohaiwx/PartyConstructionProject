@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MineView.h"
 #import "LoginViewController.h"
+#import "PersonalInformationViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

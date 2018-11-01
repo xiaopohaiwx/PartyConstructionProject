@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol LoginVeiwDelegate <NSObject>
+
+- (void)DidSelectLoginBtn;
+
+@end
 
 @interface LoginView : UIView
+
+@property (nonatomic, strong) UITextField *fieldIDNum;
+@property (nonatomic, strong) UITextField *fieldPassWord;
+@property (nonatomic, weak) id<LoginVeiwDelegate> delegate;
 
 @end
 

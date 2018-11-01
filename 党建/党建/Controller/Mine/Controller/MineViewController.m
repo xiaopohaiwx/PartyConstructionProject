@@ -54,6 +54,22 @@
     [self initNavigationBar];
     [self initMineView];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     if([USERDEFAULT(@"token")])
+     {
+         [_mineView.imgViewHead setImageWithURL:[NSURL URLWithString:[USERDEFAULT(@"headImg")]] placeholderImage:[UIImage imageNamed:@"my_head"]];
+         [_mineView.button setTitle:[USERDEFAULT(@"userName")] forState:UIControlStateNormal];
+         _mineView.exitBtn.hidden = NO;
+     }
+    else
+    {
+        _mineView.imgViewHead.image = [UIImage imageNamed:@"my_head"];
+        [_mineView.button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
+        _mineView.exitBtn.hidden = YES;
+    }
+}
 
 #pragma mark -- MineViewDelegate
 - (void)DidSelectItem:(NSInteger)tag
@@ -66,9 +82,10 @@
             break;
         case 1:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
-                
+                PersonalInformationViewController *PIView = [[PersonalInformationViewController alloc] init];
+                [self.navigationController pushViewController:PIView animated:YES];
             }
             else
             {
@@ -78,7 +95,7 @@
             break;
         case 2:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -90,7 +107,7 @@
             break;
         case 3:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -102,7 +119,7 @@
             break;
         case 4:
         {
-            if([[USERDEFAULT(@"login")] isEqualToString:@"YES"])
+            if([USERDEFAULT(@"token")])
             {
                 
             }
@@ -110,6 +127,17 @@
             {
                 [self jumpLoginView];
             }
+        }
+            break;
+        case 5:
+        {
+            NSLog(@"点击了退出登录");
+            //将token值置空
+            [SETUSERDEFAULT(nil, @"token")];
+            //移除视图
+            [_mineView removeFromSuperview];
+            //重新加载视图
+            [self initMineView];
         }
             break;
             
