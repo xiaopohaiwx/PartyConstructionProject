@@ -52,14 +52,11 @@
     logoView.image = [UIImage imageNamed:@"logo"];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:logoView];
     self.navigationItem.leftBarButtonItem = leftItem;
-    if(![USERDEFAULT(@"token")])
-    {
-        _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-        [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
-        self.navigationItem.rightBarButtonItem = rightItem;
-    }
+    _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginBtn addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:_loginBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 //初始化scrollView
 - (void)initScrollView
@@ -127,6 +124,19 @@
     [self initBanner];
     [self initFirstPageView];
     [self initTabbarWireView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if([USERDEFAULT(@"token")])
+    {
+        _loginBtn.hidden = YES;
+    }
+    else
+    {
+        _loginBtn.hidden = NO;
+    }
 }
 
 //导航栏登录点击事件

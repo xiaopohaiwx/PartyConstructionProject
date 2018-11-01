@@ -61,7 +61,14 @@
      {
          [_mineView.imgViewHead setImageWithURL:[NSURL URLWithString:[USERDEFAULT(@"headImg")]] placeholderImage:[UIImage imageNamed:@"my_head"]];
          [_mineView.button setTitle:[USERDEFAULT(@"userName")] forState:UIControlStateNormal];
+         _mineView.exitBtn.hidden = NO;
      }
+    else
+    {
+        _mineView.imgViewHead.image = [UIImage imageNamed:@"my_head"];
+        [_mineView.button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
+        _mineView.exitBtn.hidden = YES;
+    }
 }
 
 #pragma mark -- MineViewDelegate
@@ -77,7 +84,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                PersonalInformationViewController *PIView = [[PersonalInformationViewController alloc] init];
+                [self.navigationController pushViewController:PIView animated:YES];
             }
             else
             {
@@ -124,6 +132,12 @@
         case 5:
         {
             NSLog(@"点击了退出登录");
+            //将token值置空
+            [SETUSERDEFAULT(nil, @"token")];
+            //移除视图
+            [_mineView removeFromSuperview];
+            //重新加载视图
+            [self initMineView];
         }
             break;
             

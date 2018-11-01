@@ -58,4 +58,15 @@
     [superView addSubview:button];
     return button;
 }
+
++ (UIButton *)buttonWithText:(NSString *)text SelectText:(NSString *)selectText TextColor:(UIColor *)color Target:(id)target Action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitle:selectText forState:UIControlStateSelected];
+    [button setTintColor:color];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
 @end

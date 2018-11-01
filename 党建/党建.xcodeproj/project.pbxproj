@@ -15,6 +15,8 @@
 		0401703D2184456E0002C4D4 /* NewsDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401703B2184456E0002C4D4 /* NewsDetailsViewModel.m */; };
 		040170402184457B0002C4D4 /* BaseNewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401703F2184457B0002C4D4 /* BaseNewsDetailsViewController.m */; };
 		0406C21B2189A49100B53A88 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C21A2189A49100B53A88 /* LoginModel.m */; };
+		04905019218A80E100486674 /* PersonalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04905018218A80E100486674 /* PersonalInformationViewController.m */; };
+		0490501D218A8AC500486674 /* PersonalInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490501C218A8AC500486674 /* PersonalInformationView.m */; };
 		04942EFE2182A15400EC19E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04942EFD2182A15400EC19E2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A03439218724FF001912F2 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A03438218724FF001912F2 /* MineView.m */; };
 		04A0343F218744E2001912F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0343E218744E2001912F2 /* LoginViewController.m */; };
@@ -82,6 +84,10 @@
 		0401703F2184457B0002C4D4 /* BaseNewsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNewsDetailsViewController.m; sourceTree = "<group>"; };
 		0406C2192189A49100B53A88 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		0406C21A2189A49100B53A88 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		04905017218A80E100486674 /* PersonalInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationViewController.h; sourceTree = "<group>"; };
+		04905018218A80E100486674 /* PersonalInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationViewController.m; sourceTree = "<group>"; };
+		0490501B218A8AC500486674 /* PersonalInformationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationView.h; sourceTree = "<group>"; };
+		0490501C218A8AC500486674 /* PersonalInformationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationView.m; sourceTree = "<group>"; };
 		04942EFC2182A15400EC19E2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04942EFD2182A15400EC19E2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04A03437218724FF001912F2 /* MineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
@@ -248,6 +254,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		04905015218A7FE400486674 /* PersonalInformation */ = {
+			isa = PBXGroup;
+			children = (
+				0490501A218A89ED00486674 /* View */,
+				04905016218A80C300486674 /* Controller */,
+			);
+			path = PersonalInformation;
+			sourceTree = "<group>";
+		};
+		04905016218A80C300486674 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04905017218A80E100486674 /* PersonalInformationViewController.h */,
+				04905018218A80E100486674 /* PersonalInformationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0490501A218A89ED00486674 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0490501B218A8AC500486674 /* PersonalInformationView.h */,
+				0490501C218A8AC500486674 /* PersonalInformationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04A03436218724DF001912F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +392,7 @@
 				04B1A946217FFF0300B83E3C /* Notice */,
 				04B1A94B217FFF5D00B83E3C /* Mine */,
 				04A0343A218744B6001912F2 /* Login */,
+				04905015218A7FE400486674 /* PersonalInformation */,
 				040170242183EA4E0002C4D4 /* HandheldLife */,
 				DDA4A42E21845D2F00FFA87C /* HistoryOfToday */,
 				DDF623062182FF7C0013BBB7 /*  Picture */,
@@ -739,6 +773,7 @@
 				0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */,
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				04905019218A80E100486674 /* PersonalInformationViewController.m in Sources */,
 				DDF0E0B221899311005B5231 /* YTQDropdownMenu.m in Sources */,
 				DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
@@ -749,6 +784,7 @@
 				0401703D2184456E0002C4D4 /* NewsDetailsViewModel.m in Sources */,
 				0406C21B2189A49100B53A88 /* LoginModel.m in Sources */,
 				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
+				0490501D218A8AC500486674 /* PersonalInformationView.m in Sources */,
 				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
 				DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */,
 				040170292183EAC30002C4D4 /* HandheldLifeViewController.m in Sources */,
@@ -899,6 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S83B38WRSW;
 				GCC_PREFIX_HEADER = "党建/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "党建/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -906,7 +943,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huashan.Label--.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huashan.Label;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -919,6 +956,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S83B38WRSW;
 				GCC_PREFIX_HEADER = "党建/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "党建/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -926,7 +964,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huashan.Label--.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huashan.Label;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

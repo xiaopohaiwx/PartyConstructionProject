@@ -15,4 +15,5 @@
 #import "UIImageView+AFNetworking.h"
 #import "CommonCategory.h"
 #import "AssignToObject.h"
+#import "CommonAlertView.h"
 #endif /* PrefixHeader_pch */

@@ -11,7 +11,6 @@
 @implementation MineView{
     UIImageView *imgViewBG;
     UIButton *columnBtn;
-    UIButton *exitBtn;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -82,21 +81,20 @@
             }];
         }
         
-        if([USERDEFAULT(@"token")])
-        {
-            exitBtn = [UIButton buttonWithName:@"login_btn" SuperView:self Title:@"退出登录" Target:self Action:@selector(MineBtn:)];
-            exitBtn.tag = 5;
-            [exitBtn makeConstraints:^(MASConstraintMaker *make) {
-                make.left.equalTo(15);
-                make.right.equalTo(-15);
-                make.top.equalTo(self->columnBtn.bottom).offset(30);
-                make.height.equalTo(50);
-            }];
-        }
-        else
+        _exitBtn = [UIButton buttonWithName:@"login_btn" SuperView:self Title:@"退出登录" Target:self Action:@selector(MineBtn:)];
+        _exitBtn.tag = 5;
+        [_exitBtn makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(15);
+            make.right.equalTo(-15);
+            make.top.equalTo(self->columnBtn.bottom).offset(30);
+            make.height.equalTo(50);
+        }];
+        
+        if(![USERDEFAULT(@"token")])
         {
             _imgViewHead.image = [UIImage imageNamed:@"my_head"];
             [_button setTitle:@"您还没有登录，请登录" forState:UIControlStateNormal];
+            _exitBtn.hidden = YES;
         }
     }
     return self;

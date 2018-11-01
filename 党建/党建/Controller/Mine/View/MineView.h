@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIImageView *imgViewHead;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIButton *exitBtn;
 
 @end
 

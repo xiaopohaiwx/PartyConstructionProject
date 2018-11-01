@@ -84,9 +84,12 @@
             [SETUSERDEFAULT([modelArr[0] valueForKey:@"username"], @"userName")];
             [weakSelf.navigationController popViewControllerAnimated:YES];
         }
-        
+        else
+        {
+            [CommonAlertView initMessage:msg andVC:weakSelf];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [CommonAlertView initMessage:@"请求失败，请检查网络。" andVC:weakSelf];
     }];
 }
 /*
