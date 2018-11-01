@@ -59,13 +59,23 @@
     return button;
 }
 
-+ (UIButton *)buttonWithText:(NSString *)text SelectText:(NSString *)selectText TextColor:(UIColor *)color Target:(id)target Action:(SEL)action
++ (UIButton *)buttonWithText:(NSString *)text TextColor:(UIColor *)color Target:(id)target Action:(SEL)action
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:text forState:UIControlStateNormal];
-    [button setTitle:selectText forState:UIControlStateSelected];
     [button setTintColor:color];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
++ (UIButton *)buttonWithSuperView:(UIView *)superView Name:(NSString *)name SelectName:(NSString *)selectName Target:(id)target Action:(SEL)action Tag:(NSInteger)tag
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:selectName] forState:UIControlStateSelected];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    button.tag = tag;
+    [superView addSubview:button];
     return button;
 }
 

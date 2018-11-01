@@ -10,11 +10,11 @@
 #import "MineView.h"
 #import "LoginViewController.h"
 #import "PersonalInformationViewController.h"
-<<<<<<< .merge_file_W29U6A
+<<<<<<< HEAD
 #import "PersonalIntegralViewController.h"
 =======
 #import "ChangePWDViewController.h"
->>>>>>> .merge_file_UGTf4K
+>>>>>>> cdeed4f122777263ad65963e6c4080142354485b
 
 NS_ASSUME_NONNULL_BEGIN
 
