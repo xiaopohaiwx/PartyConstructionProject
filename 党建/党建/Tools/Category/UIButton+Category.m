@@ -37,5 +37,36 @@
     return button;
 }
 
++ (UIButton *)buttonWithName:(NSString *)name SuperView:(UIView *)superView Title:(NSString *)title Target:(id)target Action:(SEL)action{
+    UIButton *button = [[UIButton alloc] init];
+    [button setBackgroundImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:title forState:UIControlStateNormal];
+    [superView addSubview:button];
+    return button;
+}
+
+
++ (UIButton *)buttonWithText:(NSString *)text TextColor:(UIColor *)color TextSize:(NSInteger)size SuperView:(UIView *)superView Tag:(NSInteger)tag Target:(id)target Action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTintColor:color];
+    button.titleLabel.font = [UIFont systemFontOfSize:size];
+    button.tag = tag;
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [superView addSubview:button];
+    return button;
+}
+
++ (UIButton *)buttonWithText:(NSString *)text SelectText:(NSString *)selectText TextColor:(UIColor *)color Target:(id)target Action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitle:selectText forState:UIControlStateSelected];
+    [button setTintColor:color];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
 
 @end
