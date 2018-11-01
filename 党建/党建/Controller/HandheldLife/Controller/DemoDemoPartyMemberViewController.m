@@ -88,7 +88,7 @@
     //该数组是在Content.plist中存储
     NSArray *arr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Content" ofType:@"plist"]];
     //根据类型选择不同的TOKEN值
-    NSString *url = [NSString stringWithFormat:@"/hhdj/nationComment/userList.do?select_branch=%@&page=%ld&rows=15", arr[self.type], self.page];
+    NSString *url = [NSString stringWithFormat:@"/hhdj/nationComment/userList.do?select_branch=%@&user_id=%@&page=%ld&rows=15", arr[self.type], [USERDEFAULT(@"token")],self.page];
     [DemoDemoPartMemberViewModel GET:url ObjectArray:^(NSArray * _Nonnull arr) {
         
         for (NSInteger i = 0; i < [arr count]; i++)
