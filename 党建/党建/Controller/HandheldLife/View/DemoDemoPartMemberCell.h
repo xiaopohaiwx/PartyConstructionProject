@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *nameLabel;
 /** 信息 */
 @property (nonatomic, strong) UILabel *messageLable;
+/** 底部下划线 */
+@property (nonatomic, strong) UIImageView *lineView;
 
 -(void)getModel:(DemoDemoPartMemberModel *)obj;
 
