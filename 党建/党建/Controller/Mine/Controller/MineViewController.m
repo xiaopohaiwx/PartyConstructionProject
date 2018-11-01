@@ -109,7 +109,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                ChangePWDViewController * changeVC = [[ChangePWDViewController alloc] init];
+                [self.navigationController pushViewController:changeVC animated:YES];
             }
             else
             {

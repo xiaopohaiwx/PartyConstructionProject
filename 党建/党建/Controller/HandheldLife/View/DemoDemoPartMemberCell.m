@@ -42,6 +42,14 @@
             make.width.equalTo(200);
             make.height.equalTo(15);
         }];
+        
+        _lineView = [UIImageView imageViewWithName:@"line.jpg" SuperView:self];
+        [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(0);
+            make.right.left.equalTo(0);
+            make.height.equalTo(2);
+        }];
+        
     }
     return self;
 }
