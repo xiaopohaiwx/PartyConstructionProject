@@ -6,13 +6,13 @@
 //  Copyright © 2018年 wx. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BasePersonalInformationView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PersonalInformationView : UIView
+@interface PersonalInformationView : BasePersonalInformationView
 
-@property (nonatomic, strong) UIImageView *imgViewHead;
+- (instancetype)initWithFrame:(CGRect)frame ContentArr:(NSMutableArray *)contentArr;
 
 @end
 
