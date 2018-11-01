@@ -45,6 +45,8 @@
 		04F9AE6A2182002000C63D50 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE682182002000C63D50 /* LoadingView.m */; };
 		04F9AE6B2182002000C63D50 /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE692182002000C63D50 /* RefreshTableView.m */; };
 		04F9AE702182070900C63D50 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9AE6F2182070900C63D50 /* TableViewCell.m */; };
+		1833454B218A92B100F10910 /* ChangePWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1833454A218A92B100F10910 /* ChangePWDViewController.m */; };
+		1833454E218A930D00F10910 /* InputPWDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1833454D218A930D00F10910 /* InputPWDView.m */; };
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 		DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E3D218300B8000E135A /* CommonAlertView.m */; };
 		DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */; };
@@ -144,6 +146,10 @@
 		04F9AE6C2182066100C63D50 /* CommonJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonJudge.h; sourceTree = "<group>"; };
 		04F9AE6E2182070200C63D50 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		04F9AE6F2182070900C63D50 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		18334549218A92B100F10910 /* ChangePWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePWDViewController.h; sourceTree = "<group>"; };
+		1833454A218A92B100F10910 /* ChangePWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePWDViewController.m; sourceTree = "<group>"; };
+		1833454C218A930D00F10910 /* InputPWDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPWDView.h; sourceTree = "<group>"; };
+		1833454D218A930D00F10910 /* InputPWDView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputPWDView.m; sourceTree = "<group>"; };
 		505F7376DF9518EA7F07B5D9 /* libPods-党建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-党建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130BAFD078A61363CE1067F /* Pods-党建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.release.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.release.xcconfig"; sourceTree = "<group>"; };
 		D10C287E4D106B022F8B9F3A /* Pods-党建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-党建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-党建/Pods-党建.debug.xcconfig"; sourceTree = "<group>"; };
@@ -393,6 +399,7 @@
 				04B1A94B217FFF5D00B83E3C /* Mine */,
 				04A0343A218744B6001912F2 /* Login */,
 				04905015218A7FE400486674 /* PersonalInformation */,
+				18334548218A921C00F10910 /* ChangePWD */,
 				040170242183EA4E0002C4D4 /* HandheldLife */,
 				DDA4A42E21845D2F00FFA87C /* HistoryOfToday */,
 				DDF623062182FF7C0013BBB7 /*  Picture */,
@@ -552,6 +559,17 @@
 				04F9AE582181F55A00C63D50 /* GetDataBase.m */,
 			);
 			path = CHFFMDB;
+			sourceTree = "<group>";
+		};
+		18334548218A921C00F10910 /* ChangePWD */ = {
+			isa = PBXGroup;
+			children = (
+				18334549218A92B100F10910 /* ChangePWDViewController.h */,
+				1833454A218A92B100F10910 /* ChangePWDViewController.m */,
+				1833454C218A930D00F10910 /* InputPWDView.h */,
+				1833454D218A930D00F10910 /* InputPWDView.m */,
+			);
+			path = ChangePWD;
 			sourceTree = "<group>";
 		};
 		89A99980C78D2B5C00D1B4EA /* Frameworks */ = {
@@ -756,6 +774,7 @@
 				DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */,
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
 				DDF623262182FF7D0013BBB7 /* PictureCollectionViewCell.m in Sources */,
+				1833454B218A92B100F10910 /* ChangePWDViewController.m in Sources */,
 				DDF0E0B921899343005B5231 /* DemoDemoPartMemberViewModel.m in Sources */,
 				04B1A943217FFE9900B83E3C /* FirstViewController.m in Sources */,
 				DDF0E0AD21899246005B5231 /* DemoDemoPartMemberCell.m in Sources */,
@@ -772,6 +791,7 @@
 				04B1A93D217FFDEC00B83E3C /* BaseTabBarViewController.m in Sources */,
 				0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */,
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
+				1833454E218A930D00F10910 /* InputPWDView.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
 				04905019218A80E100486674 /* PersonalInformationViewController.m in Sources */,
 				DDF0E0B221899311005B5231 /* YTQDropdownMenu.m in Sources */,
