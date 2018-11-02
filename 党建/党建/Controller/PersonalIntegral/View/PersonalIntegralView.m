@@ -10,7 +10,7 @@
 
 @implementation PersonalIntegralView
 
--(id)initWithFrame:(CGRect)frame WithTypeArr:(NSArray *)typeArr NumArr:(NSArray *)numArr
+-(id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame])
     {
@@ -91,33 +91,7 @@
             make.height.equalTo(18);
         }];
         
-        /*-----规则内容(登录App....)-----*/
-        for (int i = 0; i < [typeArr count]; i++)
-        {
-            _bgRuleImgView = [UIImageView imageViewWithSuperView:self BGColor:[UIColor whiteColor]];
-            [_bgRuleImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.bgDataImgView.bottom).offset(36 + 34 * i);
-                make.left.equalTo(2);
-                make.right.equalTo(-2);
-                make.height.equalTo(32);
-            }];
-            
-            _contentLabel = [UILabel labelWithContent:typeArr[i] SuperView:self.bgRuleImgView TextColor:ssRGBHex(0x7F7F7F) Font:[UIFont systemFontOfSize:15.0] TextAlignment:NSTextAlignmentLeft NumberOfLines:YES];
-            [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.bgRuleImgView.centerY);
-                make.left.equalTo(16);
-                make.width.equalTo(SCREENWIDTH - 60);
-                make.height.equalTo(18);
-            }];
-            
-            _numLabel = [UILabel labelWithContent:numArr[i] SuperView:self.bgRuleImgView TextColor:[UIColor blackColor] Font:[UIFont systemFontOfSize:15.0] TextAlignment:NSTextAlignmentRight NumberOfLines:YES];
-            [_numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.bgRuleImgView.centerY);
-                make.right.equalTo(-16);
-                make.width.equalTo(20);
-                make.height.equalTo(18);
-            }];
-        }
+        
         
         
     }
@@ -129,6 +103,37 @@
     if (_jumpBlock)
     {
         _jumpBlock(_bgDataImgView);
+    }
+}
+
+-(void)Frame:(CGRect)frame WithTypeArr:(NSArray *)typeArr NumArr:(NSArray *)numArr
+{
+    /*-----规则内容(登录App....)-----*/
+    for (int i = 0; i < [typeArr count]; i++)
+    {
+        _bgRuleImgView = [UIImageView imageViewWithSuperView:self BGColor:[UIColor whiteColor]];
+        [_bgRuleImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.bgDataImgView.bottom).offset(36 + 34 * i);
+            make.left.equalTo(2);
+            make.right.equalTo(-2);
+            make.height.equalTo(32);
+        }];
+        
+        _contentLabel = [UILabel labelWithContent:typeArr[i] SuperView:self.bgRuleImgView TextColor:ssRGBHex(0x7F7F7F) Font:[UIFont systemFontOfSize:15.0] TextAlignment:NSTextAlignmentLeft NumberOfLines:YES];
+        [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.bgRuleImgView.centerY);
+            make.left.equalTo(16);
+            make.width.equalTo(SCREENWIDTH - 60);
+            make.height.equalTo(18);
+        }];
+        
+        _numLabel = [UILabel labelWithContent:numArr[i] SuperView:self.bgRuleImgView TextColor:[UIColor blackColor] Font:[UIFont systemFontOfSize:15.0] TextAlignment:NSTextAlignmentRight NumberOfLines:YES];
+        [_numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.bgRuleImgView.centerY);
+            make.right.equalTo(-16);
+            make.width.equalTo(20);
+            make.height.equalTo(18);
+        }];
     }
 }
 

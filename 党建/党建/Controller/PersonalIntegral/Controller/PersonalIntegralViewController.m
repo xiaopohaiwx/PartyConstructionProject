@@ -10,16 +10,21 @@
 #import "PersonalIntegralView.h"
 #import "PersonalDetailIntegralViewController.h"
 #import "AssignToObject.h"
+#import "PersonalDetailViewModel.h"
 
 @interface PersonalIntegralViewController ()
 
 @property (nonatomic, strong) PersonalIntegralView *integralView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 /** 规则数组 */
-@property (nonatomic, strong) NSMutableArray *typeNameArr;
-@property (nonatomic, strong) NSMutableArray *maxNumArr;
+//@property (nonatomic, strong) NSMutableArray *typeNameArr;
+//@property (nonatomic, strong) NSMutableArray *maxNumArr;
 
 @end
+
+//当前视图的高度 = 350(顶部到积分规则位置高度) + 32 * self.typeNameArr.count(每条规则高度)
+#define RuleHeight 350 + 32 * typeNameArr.count
 
 @implementation PersonalIntegralViewController
 
@@ -28,41 +33,27 @@
     self.view.backgroundColor = ssRGBHex(0xE3E3E3);
     self.navigationItem.title = @"个人量化积分";
 
+    [self getAllView];
     [self getHTTPManager];
-}
-
--(NSMutableArray *)typeNameArr
-{
-    if(!_typeNameArr)
-    {
-        _typeNameArr = [[NSMutableArray alloc] initWithCapacity:1];
-    }
-    return _typeNameArr;
-}
-
--(NSMutableArray *)maxNumArr
-{
-    if(!_maxNumArr)
-    {
-        _maxNumArr = [[NSMutableArray alloc] initWithCapacity:1];
-    }
-    return _maxNumArr;
 }
 
 //视图界面
 -(void)getAllView
 {
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
-    [self.view addSubview:scrollView];
-    //当前视图的高度 = 350(顶部到积分规则位置高度) + 32 * self.typeNameArr.count(每条规则高度)
-    scrollView.contentSize = CGSizeMake(SCREENWIDTH, 350 + 32 * self.typeNameArr.count);
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    [self.view addSubview:_scrollView];
     
-    _integralView = [[PersonalIntegralView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 350 + 32 * self.typeNameArr.count) WithTypeArr:self.typeNameArr NumArr:self.maxNumArr];
-    [scrollView addSubview:_integralView];
+    //界面视图
+    _integralView = [[PersonalIntegralView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    [self.scrollView addSubview:_integralView];
     __weak typeof(self) weakSelf = self;
-    _integralView.jumpBlock = ^(UIImageView * _Nonnull img) {
+    weakSelf.integralView.jumpBlock = ^(UIImageView * _Nonnull img) {
         [weakSelf.navigationController pushViewController:[[PersonalDetailIntegralViewController alloc] init] animated:YES];
     };
+    [PersonalDetailViewModel getTotalScore:^(NSString *str) {
+        //从网络获取的量化总积分积分
+        weakSelf.integralView.integralLable.text = str;
+    }];
 }
 
 //获取接口
@@ -78,14 +69,22 @@
         NSLog(@"%@", responseObject);
         
         NSArray *objArr = responseObject[@"rows"];
+        
+        //typeNameArr 规则数组
+        NSMutableArray *typeNameArr = [[NSMutableArray alloc] initWithCapacity:1];
+        //maxNumArr 积分数组
+        NSMutableArray *maxNumArr = [[NSMutableArray alloc] initWithCapacity:1];
+        
         for (id model in objArr)
         {
-            [weakSelf.typeNameArr addObject:[model valueForKey:@"typeName"]];
+            [typeNameArr addObject:[model valueForKey:@"typeName"]];
             NSString *str = [NSString stringWithFormat:@"%@", [model valueForKey:@"maxNum"]];
-            [weakSelf.maxNumArr addObject:str];
+            [maxNumArr addObject:str];
         }
         
-        [self getAllView];
+        //根据接口r规则个数更新视图高度
+        weakSelf.scrollView.contentSize = CGSizeMake(SCREENWIDTH, RuleHeight);
+        [weakSelf.integralView Frame:CGRectMake(0, 0, SCREENWIDTH, RuleHeight) WithTypeArr:typeNameArr NumArr:maxNumArr];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);

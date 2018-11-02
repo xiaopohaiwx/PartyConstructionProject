@@ -29,8 +29,10 @@ typedef void(^jumpBlock)(UIImageView *img);
 /** 具体内容 */
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, strong) UILabel *numLabel;
+
 /** 传一个接口数组 */
--(id)initWithFrame:(CGRect)frame WithTypeArr:(NSArray *)typeArr NumArr:(NSArray *)numArr;
+-(void)Frame:(CGRect)frame WithTypeArr:(NSArray *)typeArr NumArr:(NSArray *)numArr;
+
 @end
 
 NS_ASSUME_NONNULL_END
