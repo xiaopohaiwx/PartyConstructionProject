@@ -97,7 +97,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                PersonalIntegralViewController *integral = [[PersonalIntegralViewController alloc] init];
+                [self.navigationController pushViewController:integral animated:YES];
             }
             else
             {
@@ -122,7 +123,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                PayViewController * payVC = [[PayViewController alloc] init];
+                [self.navigationController pushViewController:payVC animated:YES];
             }
             else
             {
