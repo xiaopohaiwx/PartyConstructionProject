@@ -9,29 +9,33 @@
 #import "BasePersonalInformationView.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol ChangeInformationViewDelegate <NSObject>
+
+- (void)getDatePicker:(UIDatePicker *)datePicker;
+
+@end
 
 @interface ChangeInformationView : BasePersonalInformationView<UITextFieldDelegate>
 
 - (instancetype)initWithFrame:(CGRect)frame ContentArr:(NSMutableArray *)contentArr;
 
-@property (nonatomic, strong) UITextField *fieldName;
-@property (nonatomic, strong) UITextField *fieldIDNum;
-@property (nonatomic, strong) UITextField *fieldHome;
-@property (nonatomic, strong) UITextField *fieldJob;
-@property (nonatomic, strong) UITextField *fieldNational;
-@property (nonatomic, strong) UITextField *fieldWX;
-@property (nonatomic, strong) UITextField *fieldQQ;
-@property (nonatomic, strong) UITextField *fieldEducation;
-@property (nonatomic, strong) UITextField *fieldTitle;
-@property (nonatomic, strong) UITextField *fieldSalary;
-@property (nonatomic, strong) UITextField *fieldJoinTime;
-@property (nonatomic, strong) UITextField *fieldTime;
-@property (nonatomic, strong) UITextField *fieldIdentity;
 @property (nonatomic, strong) UIButton *manBtn;
 @property (nonatomic, strong) UIButton *womenBtn;
-
+@property (nonatomic, strong) UIButton *selectBtn;
+@property (nonatomic, assign) NSInteger sex;
 
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) NSMutableArray *fieldArr;
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) NSMutableArray *labelArr;
+@property (nonatomic, strong) NSMutableArray *labelTagArr;
+
+@property (nonatomic, strong) UIDatePicker *datePicker;
+
+@property (nonatomic, weak) id<ChangeInformationViewDelegate>delegate;
+
+@property (nonatomic, strong) UIView *optionsView;
+@property (nonatomic, assign) NSInteger partyStatus;
 
 @end
 

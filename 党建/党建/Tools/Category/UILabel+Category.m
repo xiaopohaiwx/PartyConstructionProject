@@ -97,4 +97,18 @@
 }
 
 
++ (UILabel *)labelWithSuperView:(UIView *)superView Text:(NSString *)text TextColor:(UIColor *)textColor Font:(float)font TextAlignment:(NSTextAlignment)textAlignment UserInteractionEnabled:(BOOL)userInteractionEnabled Tag:(NSInteger)tag
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.text = text;
+    label.textColor = textColor;
+    label.textAlignment = textAlignment;
+    label.font = [UIFont systemFontOfSize:font];
+    label.userInteractionEnabled = userInteractionEnabled;
+    label.tag = tag;
+    [superView addSubview:label];
+    return label;
+}
+
+
 @end

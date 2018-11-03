@@ -75,6 +75,12 @@
     [self initScrollView];
     [self initPersonalInformationView];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [_personalInformationView removeFromSuperview];
+    [self initPersonalInformationView];
+}
 
 
 //导航栏button点击事件

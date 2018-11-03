@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //文字自适应
 + (UILabel *)labelWithAttributedTextContent:(NSString *)content SuperView:(UIView *)superView TextColor:(UIColor *)textColor Font:(UIFont *)font LineSpacing:(NSInteger)line Broadsize:(NSInteger)widthSize mask_makeConstraints:(void (^)(MASConstraintMaker *make))makes;
+//快速创建UILabel,label能否交互
++ (UILabel *)labelWithSuperView:(UIView *)superView Text:(NSString *)text TextColor:(UIColor *)textColor Font:(float)font TextAlignment:(NSTextAlignment)textAlignment UserInteractionEnabled:(BOOL)userInteractionEnabled Tag:(NSInteger)tag;
 
 @end
 

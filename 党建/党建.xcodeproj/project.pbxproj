@@ -24,6 +24,8 @@
 		04905032218AEE3200486674 /* BasePersonalInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04905031218AEE3100486674 /* BasePersonalInformationView.m */; };
 		04905035218AEF9800486674 /* PersonalInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04905034218AEF9800486674 /* PersonalInformationView.m */; };
 		04905038218AF2F400486674 /* ChangeInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04905037218AF2F400486674 /* ChangeInformationView.m */; };
+		0490503E218B394D00486674 /* ChangePWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490503B218B394D00486674 /* ChangePWDViewController.m */; };
+		0490503F218B394D00486674 /* InputPWDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490503D218B394D00486674 /* InputPWDView.m */; };
 		04942EFE2182A15400EC19E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04942EFD2182A15400EC19E2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A03439218724FF001912F2 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A03438218724FF001912F2 /* MineView.m */; };
 		04A0343F218744E2001912F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0343E218744E2001912F2 /* LoginViewController.m */; };
@@ -107,6 +109,10 @@
 		04905034218AEF9800486674 /* PersonalInformationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationView.m; sourceTree = "<group>"; };
 		04905036218AF2F400486674 /* ChangeInformationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeInformationView.h; sourceTree = "<group>"; };
 		04905037218AF2F400486674 /* ChangeInformationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationView.m; sourceTree = "<group>"; };
+		0490503A218B394D00486674 /* ChangePWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePWDViewController.h; sourceTree = "<group>"; };
+		0490503B218B394D00486674 /* ChangePWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePWDViewController.m; sourceTree = "<group>"; };
+		0490503C218B394D00486674 /* InputPWDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPWDView.h; sourceTree = "<group>"; };
+		0490503D218B394D00486674 /* InputPWDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPWDView.m; sourceTree = "<group>"; };
 		04942EFC2182A15400EC19E2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04942EFD2182A15400EC19E2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04A03437218724FF001912F2 /* MineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
@@ -316,6 +322,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		04905039218B394D00486674 /* ChangePWD */ = {
+			isa = PBXGroup;
+			children = (
+				0490503A218B394D00486674 /* ChangePWDViewController.h */,
+				0490503B218B394D00486674 /* ChangePWDViewController.m */,
+				0490503C218B394D00486674 /* InputPWDView.h */,
+				0490503D218B394D00486674 /* InputPWDView.m */,
+			);
+			path = ChangePWD;
+			sourceTree = "<group>";
+		};
 		04A03436218724DF001912F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +447,7 @@
 				04B1A94B217FFF5D00B83E3C /* Mine */,
 				04A0343A218744B6001912F2 /* Login */,
 				04905015218A7FE400486674 /* PersonalInformation */,
+				04905039218B394D00486674 /* ChangePWD */,
 				040170242183EA4E0002C4D4 /* HandheldLife */,
 				DDA4A42E21845D2F00FFA87C /* HistoryOfToday */,
 				DDF623062182FF7C0013BBB7 /*  Picture */,
@@ -822,6 +840,7 @@
 				DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */,
 				04905035218AEF9800486674 /* PersonalInformationView.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
+				0490503E218B394D00486674 /* ChangePWDViewController.m in Sources */,
 				04942EFE2182A15400EC19E2 /* Reachability.m in Sources */,
 				04017036218404320002C4D4 /* UILabel+Category.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
@@ -831,6 +850,7 @@
 				04F9AE592181F55A00C63D50 /* RefreshCollectionView.m in Sources */,
 				04F9AE462181F12300C63D50 /* BaseTableViewController.m in Sources */,
 				DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */,
+				0490503F218B394D00486674 /* InputPWDView.m in Sources */,
 				040170292183EAC30002C4D4 /* HandheldLifeViewController.m in Sources */,
 				040170402184457B0002C4D4 /* BaseNewsDetailsViewController.m in Sources */,
 				04905028218AE85000486674 /* ChangeInformationViewController.m in Sources */,
