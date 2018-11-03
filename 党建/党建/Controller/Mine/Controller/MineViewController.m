@@ -97,7 +97,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                PersonalIntegralViewController *integral = [[PersonalIntegralViewController alloc] init];
+                [self.navigationController pushViewController:integral animated:YES];
             }
             else
             {

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PersonalInformationView.h"
+#import "PersonalInformationViewModel.h"
+#import "ChangeInformationViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 //导航栏编辑保存button
 @property (nonatomic, strong) UIButton *navBtn;
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 @property (nonatomic, strong) PersonalInformationView *personalInformationView;
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
+@property (nonatomic, strong) NSMutableArray *modelMutArr;
 
 @end
 

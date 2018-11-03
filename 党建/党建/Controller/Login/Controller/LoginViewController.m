@@ -82,6 +82,7 @@
             //将对应用户的头像链接和用户名存储起来
             [SETUSERDEFAULT([modelArr[0] valueForKey:@"header"], @"headImg")];
             [SETUSERDEFAULT([modelArr[0] valueForKey:@"username"], @"userName")];
+            [SETUSERDEFAULT([modelArr[0] valueForKey:@"id"], @"id")];
             [weakSelf.navigationController popViewControllerAnimated:YES];
         }
         else
