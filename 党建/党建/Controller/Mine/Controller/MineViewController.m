@@ -122,7 +122,8 @@
         {
             if([USERDEFAULT(@"token")])
             {
-                
+                PayViewController * payVC = [[PayViewController alloc] init];
+                [self.navigationController pushViewController:payVC animated:YES];
             }
             else
             {

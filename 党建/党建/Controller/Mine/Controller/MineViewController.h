@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "PersonalInformationViewController.h"
 #import "ChangePWDViewController.h"
+#import "PayViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
