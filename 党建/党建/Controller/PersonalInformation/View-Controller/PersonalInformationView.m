@@ -25,7 +25,8 @@
         NSString *wxNum = [GETVALUE(contentArr[0], @"wxNum")];
         NSString *qqNum = [GETVALUE(contentArr[0], @"qqNum")];
         NSString *sex = nil;
-        if([GETVALUE(contentArr[0], @"sex")] == 0)
+        
+        if([[GETVALUE(contentArr[0], @"sex")] integerValue] == 0)
         {
             sex = @"女";
         }

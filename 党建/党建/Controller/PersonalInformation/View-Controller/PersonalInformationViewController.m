@@ -56,6 +56,11 @@
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }] ;
     
+    //修改个人信息后，将对应用户的头像链接和用户名存储起来
+    [SETUSERDEFAULT([_modelMutArr[0] valueForKey:@"header"], @"headImg")];
+    [SETUSERDEFAULT([_modelMutArr[0] valueForKey:@"username"], @"userName")];
+    
+    //初始化PersonalInformationView
     _personalInformationView = [[PersonalInformationView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 0) ContentArr:self.modelMutArr];
     [_scrollView addSubview:_personalInformationView];
     [_personalInformationView makeConstraints:^(MASConstraintMaker *make) {
@@ -73,6 +78,12 @@
     self.view.backgroundColor = BGCOLOR;
     [self initNav];
     [self initScrollView];
+    [self initPersonalInformationView];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [_personalInformationView removeFromSuperview];
     [self initPersonalInformationView];
 }
 
