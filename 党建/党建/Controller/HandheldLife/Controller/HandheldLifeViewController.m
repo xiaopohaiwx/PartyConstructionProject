@@ -9,6 +9,7 @@
 #import "HandheldLifeViewController.h"
 #import "BaseTableViewController.h"
 #import "DemoDemocraticAppraiseViewController.h"
+#import "SubmitAuditViewController.h"
 
 @interface HandheldLifeViewController ()
 
@@ -57,6 +58,7 @@
         case 2:
         {
             NSLog(@"思想汇报");
+            [self.navigationController pushViewController:[[SubmitAuditViewController alloc] init] animated:YES];
         }
             break;
         case 3:

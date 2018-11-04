@@ -55,6 +55,10 @@
 		9ACE98C4722E534AA44F301A /* libPods-党建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F7376DF9518EA7F07B5D9 /* libPods-党建.a */; };
 		DD914E3F218300B8000E135A /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E3D218300B8000E135A /* CommonAlertView.m */; };
 		DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */; };
+		DDA279DC218D93E000C7C7E1 /* PaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA279D9218D93E000C7C7E1 /* PaymentView.m */; };
+		DDA279DD218D93E000C7C7E1 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA279DB218D93E000C7C7E1 /* PayViewController.m */; };
+		DDA279E0218D98EE00C7C7E1 /* SubmitAuditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA279DF218D98EE00C7C7E1 /* SubmitAuditViewController.m */; };
+		DDA279E3218D997100C7C7E1 /* SubmitAuditView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA279E2218D997100C7C7E1 /* SubmitAuditView.m */; };
 		DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA4A43121845D9300FFA87C /* HistoryOfTodayViewController.m */; };
 		DDD73936218B38DA007076B5 /* PersonalDetailIntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD7392D218B38DA007076B5 /* PersonalDetailIntegralViewController.m */; };
 		DDD73937218B38DA007076B5 /* PersonalIntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD7392F218B38DA007076B5 /* PersonalIntegralViewController.m */; };
@@ -179,6 +183,14 @@
 		DD914E3E218300B8000E135A /* CommonAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAlertView.h; sourceTree = "<group>"; };
 		DD914E40218300D0000E135A /* NSArray+SafeObjectArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeObjectArray.h"; sourceTree = "<group>"; };
 		DD914E41218300D0000E135A /* NSArray+SafeObjectArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeObjectArray.m"; sourceTree = "<group>"; };
+		DDA279D8218D93E000C7C7E1 /* PaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentView.h; sourceTree = "<group>"; };
+		DDA279D9218D93E000C7C7E1 /* PaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentView.m; sourceTree = "<group>"; };
+		DDA279DA218D93E000C7C7E1 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		DDA279DB218D93E000C7C7E1 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		DDA279DE218D98EE00C7C7E1 /* SubmitAuditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitAuditViewController.h; sourceTree = "<group>"; };
+		DDA279DF218D98EE00C7C7E1 /* SubmitAuditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitAuditViewController.m; sourceTree = "<group>"; };
+		DDA279E1218D997100C7C7E1 /* SubmitAuditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitAuditView.h; sourceTree = "<group>"; };
+		DDA279E2218D997100C7C7E1 /* SubmitAuditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitAuditView.m; sourceTree = "<group>"; };
 		DDA4A43021845D9300FFA87C /* HistoryOfTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryOfTodayViewController.h; sourceTree = "<group>"; };
 		DDA4A43121845D9300FFA87C /* HistoryOfTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryOfTodayViewController.m; sourceTree = "<group>"; };
 		DDD7392C218B38DA007076B5 /* PersonalDetailIntegralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailIntegralViewController.h; sourceTree = "<group>"; };
@@ -256,6 +268,8 @@
 				DDF0E0A42189923D005B5231 /* DemoDemoPartyMemberViewController.m */,
 				040170272183EAC30002C4D4 /* HandheldLifeViewController.h */,
 				040170282183EAC30002C4D4 /* HandheldLifeViewController.m */,
+				DDA279DE218D98EE00C7C7E1 /* SubmitAuditViewController.h */,
+				DDA279DF218D98EE00C7C7E1 /* SubmitAuditViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +283,8 @@
 				DDF0E0AB21899246005B5231 /* DemoDemocraticAppraiseView.m */,
 				DDF0E0AC21899246005B5231 /* DemoDemoPartMemberCell.h */,
 				DDF0E0A921899246005B5231 /* DemoDemoPartMemberCell.m */,
+				DDA279E1218D997100C7C7E1 /* SubmitAuditView.h */,
+				DDA279E2218D997100C7C7E1 /* SubmitAuditView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,6 +468,7 @@
 		04B1A93E217FFE3400B83E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DDA279D7218D93E000C7C7E1 /* Pay */,
 				DDD7393A218B3944007076B5 /* ChangePWD */,
 				04B1A944217FFEA600B83E3C /* FirstPage */,
 				04B1A946217FFF0300B83E3C /* Notice */,
@@ -628,6 +645,17 @@
 				505F7376DF9518EA7F07B5D9 /* libPods-党建.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDA279D7218D93E000C7C7E1 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				DDA279D8218D93E000C7C7E1 /* PaymentView.h */,
+				DDA279D9218D93E000C7C7E1 /* PaymentView.m */,
+				DDA279DA218D93E000C7C7E1 /* PayViewController.h */,
+				DDA279DB218D93E000C7C7E1 /* PayViewController.m */,
+			);
+			path = Pay;
 			sourceTree = "<group>";
 		};
 		DDA4A42E21845D2F00FFA87C /* HistoryOfToday */ = {
@@ -879,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF0E0B821899343005B5231 /* DemoDemoPartMemberModel.m in Sources */,
+				DDA279DD218D93E000C7C7E1 /* PayViewController.m in Sources */,
 				DD914E42218300D0000E135A /* NSArray+SafeObjectArray.m in Sources */,
 				04B1A94A217FFF5700B83E3C /* NoticeViewController.m in Sources */,
 				DDF623262182FF7D0013BBB7 /* PictureCollectionViewCell.m in Sources */,
@@ -906,15 +935,18 @@
 				0401702C2183ED730002C4D4 /* HandheldLifeView.m in Sources */,
 				04F9AE702182070900C63D50 /* TableViewCell.m in Sources */,
 				04B1A91E217FEDF800B83E3C /* AppDelegate.m in Sources */,
+				DDA279E3218D997100C7C7E1 /* SubmitAuditView.m in Sources */,
 				04905019218A80E100486674 /* PersonalInformationViewController.m in Sources */,
 				DDF0E0B221899311005B5231 /* YTQDropdownMenu.m in Sources */,
 				DDA4A43221845D9300FFA87C /* HistoryOfTodayViewController.m in Sources */,
+				DDA279E0218D98EE00C7C7E1 /* SubmitAuditViewController.m in Sources */,
 				DDD73940218B3944007076B5 /* InputPWDView.m in Sources */,
 				04905035218AEF9800486674 /* PersonalInformationView.m in Sources */,
 				04F9AE5C2181F55A00C63D50 /* AssignToObject.m in Sources */,
 				04942EFE2182A15400EC19E2 /* Reachability.m in Sources */,
 				04017036218404320002C4D4 /* UILabel+Category.m in Sources */,
 				04B1A935217FF66A00B83E3C /* BaseNavigationViewController.m in Sources */,
+				DDA279DC218D93E000C7C7E1 /* PaymentView.m in Sources */,
 				04F9AE642182000100C63D50 /* CommonJudge.m in Sources */,
 				0401703D2184456E0002C4D4 /* NewsDetailsViewModel.m in Sources */,
 				0406C21B2189A49100B53A88 /* LoginModel.m in Sources */,
