@@ -171,7 +171,7 @@
         }];
         _optionsView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.8];
         
-        NSArray *optionsArr = @[@"党员", @"预备党员", @"积极分子"];
+        NSArray *optionsArr = @[@"积极分子", @"预备党员", @"党员"];
         for (NSInteger i = 0; i < 3; ++i)
         {
             UIButton *button = [UIButton buttonWithText:optionsArr[i] TextColor:TitleColor TextSize:13 SuperView:_optionsView Tag:i Target:self Action:@selector(choose:)];
@@ -208,8 +208,13 @@
 - (void)tap:(UITapGestureRecognizer *)tap
 {
     NSLog(@"------0-----");
+    if(_delegate)
+    {
+        [_delegate getAlert:[self setAlert]];
+    }
 }
 
+//入党时间手势
 - (void)tap1:(UITapGestureRecognizer *)tap
 {
     NSLog(@"------1-----");
@@ -220,7 +225,7 @@
     [_labelTagArr removeAllObjects];
     [_labelTagArr addObject:@"11"];
 }
-
+//党费最后缴纳时间手势
 - (void)tap2:(UITapGestureRecognizer *)tap
 {
     NSLog(@"-----2------");
@@ -232,7 +237,7 @@
     [_labelTagArr addObject:@"12"];
     
 }
-
+//当前身份手势
 - (void)tap3:(UITapGestureRecognizer *)tap
 {
     NSLog(@"-----3------");
@@ -320,4 +325,59 @@
     _optionsView.hidden = YES;
 }
 
+//相机相册选择提示框
+- (UIAlertController *)setAlert
+{
+    __weak typeof(self) weakSelf = self;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+            imgPicker.delegate = self;
+            //设置当拍照完或在相册选完照片后，是否跳到编辑模式进行图片剪裁。只有当showsCameraControls属性为true时才有效果
+            imgPicker.allowsEditing = YES;
+            //指定使用照相机模式,可以指定使用相册／照片库   
+            imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            if(weakSelf.delegate)
+            {
+                [weakSelf.delegate getImagePicker:imgPicker];
+            }
+        }
+        else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"相机不可用" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+            if (weakSelf.delegate)
+            {
+                [weakSelf.delegate getAlert:alert];
+            }
+        }
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+        imgPicker.delegate = self;
+        imgPicker.allowsEditing = YES;
+        if(weakSelf.delegate)
+        {
+            [weakSelf.delegate getImagePicker:imgPicker];
+        }
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    return alert;
+}
+
+#pragma mark -- UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info
+{
+    self.imgViewHead.image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    //保存图片
+    UIImageWriteToSavedPhotosAlbum(self.imgViewHead.image, nil, nil, nil);
+    if(_delegate)
+    {
+        [_delegate dismiss:self];
+    }
+}
 @end

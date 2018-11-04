@@ -12,10 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ChangeInformationViewDelegate <NSObject>
 
 - (void)getDatePicker:(UIDatePicker *)datePicker;
+- (void)getAlert:(UIAlertController *)alert;
+- (void)getImagePicker:(UIImagePickerController *)imagePicker;
+- (void)dismiss:(UIView *)view;
 
 @end
 
-@interface ChangeInformationView : BasePersonalInformationView<UITextFieldDelegate>
+@interface ChangeInformationView : BasePersonalInformationView<UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 - (instancetype)initWithFrame:(CGRect)frame ContentArr:(NSMutableArray *)contentArr;
 

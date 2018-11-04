@@ -91,12 +91,15 @@
     NSArray *arr = @[@"username", @"idCard", @"hometown", @"address", @"nation", @"wxNum", @"qqNum", @"education", @"jobRank", @"salary"];
     for(NSInteger i = 0; i < 10; ++i)
     {
+        //身份证号不能修改，跳过
         if(i == 1)
         {
             continue;
         }
+        //将修改后的信息加入字典
         [_Dic setObject:[_changeInformationView.fieldArr[i] valueForKey:@"text"] forKey:arr[i]];
     }
+    //将性别代表数字加入字典
     [_Dic setObject:[NSNumber numberWithInteger:_changeInformationView.sex] forKey:@"sex"];
     //labelb标题数组
     NSArray *arr1 = @[@"joinPartyTime", @"lastPayTime"];
@@ -104,9 +107,13 @@
     {
         [_Dic setObject:[_changeInformationView.labelArr[i] valueForKey:@"text"] forKey:arr1[i]];
     }
+    //将当前身份代表数字加入字典
     [_Dic setObject:[NSNumber numberWithInteger:_changeInformationView.partyStatus] forKey:@"partyStatus"];
+    //
+//    [_Dic setObject:_changeInformationView.imgViewHead.image forKey:@"header"];
     NSLog(@"%@", _Dic);
     
+    //修改信息请求
     [self.manager POST:@"/hhdj/user/modifyInfo.do" parameters:_Dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSString *msg = responseDic[@"msg"];
@@ -138,6 +145,21 @@
     _datePicker = datePicker;
     [self.view addSubview:_datePicker];
     [self setButton];
+}
+
+- (void)getAlert:(UIAlertController *)alert
+{
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)getImagePicker:(UIImagePickerController *)imagePicker
+{
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)dismiss:(UIView *)view
+{
+    [self dismissViewControllerAnimated:YES completion:nil]; 
 }
 
 @end
