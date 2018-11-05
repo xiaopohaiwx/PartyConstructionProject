@@ -10,28 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - 设置代理
-@class SubmitAuditView;
-
-@protocol SubmitAuditDelegate <NSObject>
-
-//添加图片
--(void)AddImg:(SubmitAuditView *)view;
-
-//跳转控制器
--(void)jumpView:(SubmitAuditView *)View;
-
-@end
-
-
 @interface SubmitAuditView : UIView
 
-/** 添加图片 */
-@property (nonatomic, strong) UIButton *AddBtn;
 /** 提交 */
 @property (nonatomic, strong) UIButton *subBtn;
 
-@property (nonatomic, weak) id<SubmitAuditDelegate> delegate;
+typedef void(^jumpBlock)(UIButton *btn);
+@property (nonatomic, copy) jumpBlock block;
 
 @end
 
