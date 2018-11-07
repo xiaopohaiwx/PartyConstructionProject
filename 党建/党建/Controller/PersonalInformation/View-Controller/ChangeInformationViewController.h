@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChangeInformationViewController : UIViewController
+@interface ChangeInformationViewController : UIViewController<ChangeInformationViewDelegate>
 
 @property (nonatomic, strong) UIButton *navBtn;
 //给人信息页面传过来的modelArr
@@ -19,6 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) ChangeInformationView *changeInformationView;
+
+@property (nonatomic, strong) UIDatePicker *datePicker;
+@property (nonatomic, strong) UIButton *enterBtn;
+
+@property (nonatomic, strong) NSMutableDictionary *Dic;
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
 
